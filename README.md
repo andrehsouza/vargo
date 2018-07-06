@@ -1,6 +1,6 @@
 # The Vargo
 
-.
+A challenge that consists of build an app about articles and videos.
 
 ## Using
 
