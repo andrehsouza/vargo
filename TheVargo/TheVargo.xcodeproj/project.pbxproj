@@ -26,6 +26,8 @@
 		7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102520EFB644003E2DCE /* ViewInterface.swift */; };
 		7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102720EFB671003E2DCE /* InteractorInterface.swift */; };
 		7BD9102B20EFB6FA003E2DCE /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD9102A20EFB6FA003E2DCE /* Feed.storyboard */; };
+		7BD9102F20EFBD82003E2DCE /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */; };
+		7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		7BD9102520EFB644003E2DCE /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		7BD9102720EFB671003E2DCE /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 		7BD9102A20EFB6FA003E2DCE /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +125,8 @@
 		7BD90FDE20EFA631003E2DCE /* TheVargo */ = {
 			isa = PBXGroup;
 			children = (
-				7BD9102C20EFB99E003E2DCE /* Common */,
 				7BD9101C20EFB312003E2DCE /* Modules */,
+				7BD9102C20EFB99E003E2DCE /* Common */,
 				7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */,
 				7BD90FE420EFA631003E2DCE /* MasterViewController.swift */,
 				7BD90FE620EFA631003E2DCE /* DetailViewController.swift */,
@@ -205,6 +209,8 @@
 		7BD9102D20EFB9BE003E2DCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */,
+				7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,7 +352,9 @@
 				7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */,
 				7BD9101A20EFB2DC003E2DCE /* ArticleInteractor.swift in Sources */,
 				7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */,
+				7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */,
 				7BD9101920EFB2DC003E2DCE /* ArticleViewController.swift in Sources */,
+				7BD9102F20EFBD82003E2DCE /* UIStoryboard+Extension.swift in Sources */,
 				7BD9101B20EFB2DC003E2DCE /* ArticleWireframe.swift in Sources */,
 				7BD90FE520EFA631003E2DCE /* MasterViewController.swift in Sources */,
 				7BD9101820EFB2DC003E2DCE /* ArticlePresenter.swift in Sources */,
