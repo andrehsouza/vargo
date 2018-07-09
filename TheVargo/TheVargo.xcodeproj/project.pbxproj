@@ -9,24 +9,31 @@
 /* Begin PBXBuildFile section */
 		7B64584220F394C10016557C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583E20F394C00016557C /* UIView+Extension.swift */; };
 		7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583F20F394C10016557C /* UIColor+Extension.swift */; };
-		7B64584420F394C10016557C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584020F394C10016557C /* UITableView+Extension.swift */; };
-		7B64584520F394C10016557C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584120F394C10016557C /* UITableViewCell+Extension.swift */; };
 		7B64584920F395CB0016557C /* VFenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64584720F395CB0016557C /* VFenceView.xib */; };
 		7B64584A20F395CB0016557C /* VFenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584820F395CB0016557C /* VFenceView.swift */; };
 		7B64584C20F396250016557C /* VCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584B20F396250016557C /* VCardView.swift */; };
 		7B64584E20F396560016557C /* VButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584D20F396560016557C /* VButton.swift */; };
 		7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585120F39DBD0016557C /* BaseViewProtocol.swift */; };
+		7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585620F3AA1F0016557C /* FeedListInterfaces.swift */; };
+		7B64585C20F3AA1F0016557C /* FeedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585720F3AA1F0016557C /* FeedListPresenter.swift */; };
+		7B64585D20F3AA1F0016557C /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585820F3AA1F0016557C /* FeedListViewController.swift */; };
+		7B64585E20F3AA1F0016557C /* FeedListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585920F3AA1F0016557C /* FeedListInteractor.swift */; };
+		7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585A20F3AA1F0016557C /* FeedListWireframe.swift */; };
+		7B64586520F3AA580016557C /* FeedDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586020F3AA580016557C /* FeedDetailInterfaces.swift */; };
+		7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586120F3AA580016557C /* FeedDetailPresenter.swift */; };
+		7B64586720F3AA580016557C /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586220F3AA580016557C /* FeedDetailViewController.swift */; };
+		7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586320F3AA580016557C /* FeedDetailInteractor.swift */; };
+		7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586420F3AA580016557C /* FeedDetailWireframe.swift */; };
+		7B64586C20F3C8930016557C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586B20F3C8930016557C /* Article.swift */; };
+		7B64586E20F3CA5E0016557C /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586D20F3CA5E0016557C /* UICollectionView+Extension.swift */; };
+		7B64587020F3CA850016557C /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586F20F3CA850016557C /* UICollectionViewCell+Extension.swift */; };
+		7B6458AE20F3F7C60016557C /* VSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6458AD20F3F7C60016557C /* VSplitViewController.swift */; };
 		7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */; };
 		7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FE120EFA631003E2DCE /* TheVargo.xcdatamodeld */; };
 		7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FEB20EFA633003E2DCE /* Assets.xcassets */; };
 		7BD90FEF20EFA633003E2DCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */; };
 		7BD90FFA20EFA633003E2DCE /* TheVargoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FF920EFA633003E2DCE /* TheVargoTests.swift */; };
 		7BD9100520EFA633003E2DCE /* TheVargoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9100420EFA633003E2DCE /* TheVargoUITests.swift */; };
-		7BD9101720EFB2DC003E2DCE /* ArticleInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9101220EFB2DC003E2DCE /* ArticleInterfaces.swift */; };
-		7BD9101820EFB2DC003E2DCE /* ArticlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9101320EFB2DC003E2DCE /* ArticlePresenter.swift */; };
-		7BD9101920EFB2DC003E2DCE /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9101420EFB2DC003E2DCE /* ArticleViewController.swift */; };
-		7BD9101A20EFB2DC003E2DCE /* ArticleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9101520EFB2DC003E2DCE /* ArticleInteractor.swift */; };
-		7BD9101B20EFB2DC003E2DCE /* ArticleWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9101620EFB2DC003E2DCE /* ArticleWireframe.swift */; };
 		7BD9102220EFB534003E2DCE /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102120EFB534003E2DCE /* BaseWireframe.swift */; };
 		7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */; };
 		7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102520EFB644003E2DCE /* ViewInterface.swift */; };
@@ -56,13 +63,25 @@
 /* Begin PBXFileReference section */
 		7B64583E20F394C00016557C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7B64583F20F394C10016557C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		7B64584020F394C10016557C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		7B64584120F394C10016557C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		7B64584720F395CB0016557C /* VFenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VFenceView.xib; sourceTree = "<group>"; };
 		7B64584820F395CB0016557C /* VFenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFenceView.swift; sourceTree = "<group>"; };
 		7B64584B20F396250016557C /* VCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardView.swift; sourceTree = "<group>"; };
 		7B64584D20F396560016557C /* VButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VButton.swift; sourceTree = "<group>"; };
 		7B64585120F39DBD0016557C /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		7B64585620F3AA1F0016557C /* FeedListInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListInterfaces.swift; sourceTree = "<group>"; };
+		7B64585720F3AA1F0016557C /* FeedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListPresenter.swift; sourceTree = "<group>"; };
+		7B64585820F3AA1F0016557C /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
+		7B64585920F3AA1F0016557C /* FeedListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListInteractor.swift; sourceTree = "<group>"; };
+		7B64585A20F3AA1F0016557C /* FeedListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListWireframe.swift; sourceTree = "<group>"; };
+		7B64586020F3AA580016557C /* FeedDetailInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailInterfaces.swift; sourceTree = "<group>"; };
+		7B64586120F3AA580016557C /* FeedDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailPresenter.swift; sourceTree = "<group>"; };
+		7B64586220F3AA580016557C /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		7B64586320F3AA580016557C /* FeedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailInteractor.swift; sourceTree = "<group>"; };
+		7B64586420F3AA580016557C /* FeedDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailWireframe.swift; sourceTree = "<group>"; };
+		7B64586B20F3C8930016557C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		7B64586D20F3CA5E0016557C /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		7B64586F20F3CA850016557C /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		7B6458AD20F3F7C60016557C /* VSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSplitViewController.swift; sourceTree = "<group>"; };
 		7BD90FDC20EFA631003E2DCE /* TheVargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD90FE220EFA631003E2DCE /* TheVargo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheVargo.xcdatamodel; sourceTree = "<group>"; };
@@ -75,11 +94,6 @@
 		7BD9100020EFA633003E2DCE /* TheVargoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheVargoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD9100420EFA633003E2DCE /* TheVargoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVargoUITests.swift; sourceTree = "<group>"; };
 		7BD9100620EFA633003E2DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BD9101220EFB2DC003E2DCE /* ArticleInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInterfaces.swift; sourceTree = "<group>"; };
-		7BD9101320EFB2DC003E2DCE /* ArticlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresenter.swift; sourceTree = "<group>"; };
-		7BD9101420EFB2DC003E2DCE /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
-		7BD9101520EFB2DC003E2DCE /* ArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInteractor.swift; sourceTree = "<group>"; };
-		7BD9101620EFB2DC003E2DCE /* ArticleWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWireframe.swift; sourceTree = "<group>"; };
 		7BD9102120EFB534003E2DCE /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		7BD9102520EFB644003E2DCE /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -121,6 +135,7 @@
 				7B64584620F395CB0016557C /* VFenceView */,
 				7B64584B20F396250016557C /* VCardView.swift */,
 				7B64584D20F396560016557C /* VButton.swift */,
+				7B6458AD20F3F7C60016557C /* VSplitViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +155,38 @@
 				7B64585120F39DBD0016557C /* BaseViewProtocol.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		7B64585420F3A9CF0016557C /* FeedList */ = {
+			isa = PBXGroup;
+			children = (
+				7B64585620F3AA1F0016557C /* FeedListInterfaces.swift */,
+				7B64585720F3AA1F0016557C /* FeedListPresenter.swift */,
+				7B64585820F3AA1F0016557C /* FeedListViewController.swift */,
+				7B64585920F3AA1F0016557C /* FeedListInteractor.swift */,
+				7B64585A20F3AA1F0016557C /* FeedListWireframe.swift */,
+			);
+			path = FeedList;
+			sourceTree = "<group>";
+		};
+		7B64585520F3A9E20016557C /* FeedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7B64586020F3AA580016557C /* FeedDetailInterfaces.swift */,
+				7B64586120F3AA580016557C /* FeedDetailPresenter.swift */,
+				7B64586220F3AA580016557C /* FeedDetailViewController.swift */,
+				7B64586320F3AA580016557C /* FeedDetailInteractor.swift */,
+				7B64586420F3AA580016557C /* FeedDetailWireframe.swift */,
+			);
+			path = FeedDetail;
+			sourceTree = "<group>";
+		};
+		7B64586A20F3C82E0016557C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7B64586B20F3C8930016557C /* Article.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		7BD90FD320EFA631003E2DCE = {
@@ -165,8 +212,8 @@
 		7BD90FDE20EFA631003E2DCE /* TheVargo */ = {
 			isa = PBXGroup;
 			children = (
-				7BD9101C20EFB312003E2DCE /* Modules */,
 				7BD9102C20EFB99E003E2DCE /* Common */,
+				7BD9101C20EFB312003E2DCE /* Modules */,
 				7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */,
 				7BD90FEB20EFA633003E2DCE /* Assets.xcassets */,
 				7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */,
@@ -203,18 +250,6 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		7BD9101D20EFB320003E2DCE /* Article */ = {
-			isa = PBXGroup;
-			children = (
-				7BD9101220EFB2DC003E2DCE /* ArticleInterfaces.swift */,
-				7BD9101320EFB2DC003E2DCE /* ArticlePresenter.swift */,
-				7BD9101420EFB2DC003E2DCE /* ArticleViewController.swift */,
-				7BD9101520EFB2DC003E2DCE /* ArticleInteractor.swift */,
-				7BD9101620EFB2DC003E2DCE /* ArticleWireframe.swift */,
-			);
-			path = Article;
-			sourceTree = "<group>";
-		};
 		7BD9102020EFB521003E2DCE /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,7 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				7BD9102A20EFB6FA003E2DCE /* Feed.storyboard */,
-				7BD9101D20EFB320003E2DCE /* Article */,
+				7B64585420F3A9CF0016557C /* FeedList */,
+				7B64585520F3A9E20016557C /* FeedDetail */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -238,6 +274,7 @@
 		7BD9102C20EFB99E003E2DCE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7B64586A20F3C82E0016557C /* Entities */,
 				7B64583D20F394220016557C /* Views */,
 				7BD9102D20EFB9BE003E2DCE /* Extensions */,
 			);
@@ -248,11 +285,11 @@
 			isa = PBXGroup;
 			children = (
 				7B64583F20F394C10016557C /* UIColor+Extension.swift */,
-				7B64584020F394C10016557C /* UITableView+Extension.swift */,
-				7B64584120F394C10016557C /* UITableViewCell+Extension.swift */,
 				7B64583E20F394C00016557C /* UIView+Extension.swift */,
 				7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */,
 				7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */,
+				7B64586D20F3CA5E0016557C /* UICollectionView+Extension.swift */,
+				7B64586F20F3CA850016557C /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,27 +426,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
+				7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */,
+				7B64586C20F3C8930016557C /* Article.swift in Sources */,
 				7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */,
 				7BD9102220EFB534003E2DCE /* BaseWireframe.swift in Sources */,
 				7B64584220F394C10016557C /* UIView+Extension.swift in Sources */,
+				7B64587020F3CA850016557C /* UICollectionViewCell+Extension.swift in Sources */,
 				7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */,
+				7B64586520F3AA580016557C /* FeedDetailInterfaces.swift in Sources */,
+				7B64586E20F3CA5E0016557C /* UICollectionView+Extension.swift in Sources */,
 				7B64584C20F396250016557C /* VCardView.swift in Sources */,
 				7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */,
+				7B64585D20F3AA1F0016557C /* FeedListViewController.swift in Sources */,
 				7B64584A20F395CB0016557C /* VFenceView.swift in Sources */,
-				7BD9101A20EFB2DC003E2DCE /* ArticleInteractor.swift in Sources */,
 				7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */,
-				7B64584520F394C10016557C /* UITableViewCell+Extension.swift in Sources */,
 				7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */,
-				7BD9101920EFB2DC003E2DCE /* ArticleViewController.swift in Sources */,
 				7BD9102F20EFBD82003E2DCE /* UIStoryboard+Extension.swift in Sources */,
-				7BD9101B20EFB2DC003E2DCE /* ArticleWireframe.swift in Sources */,
-				7B64584420F394C10016557C /* UITableView+Extension.swift in Sources */,
+				7B64586720F3AA580016557C /* FeedDetailViewController.swift in Sources */,
 				7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */,
 				7B64584E20F396560016557C /* VButton.swift in Sources */,
-				7BD9101820EFB2DC003E2DCE /* ArticlePresenter.swift in Sources */,
+				7B64585C20F3AA1F0016557C /* FeedListPresenter.swift in Sources */,
 				7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */,
+				7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */,
+				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,
+				7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */,
 				7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */,
-				7BD9101720EFB2DC003E2DCE /* ArticleInterfaces.swift in Sources */,
+				7B6458AE20F3F7C60016557C /* VSplitViewController.swift in Sources */,
+				7B64585E20F3AA1F0016557C /* FeedListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

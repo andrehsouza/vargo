@@ -29,7 +29,7 @@ class VCardView: UIView {
         }
     }
     
-    @IBInspectable var shadowOpacity: Float = 0.5 {
+    @IBInspectable var shadowOpacity: Float = 0.0 {
         didSet {
             updateViewsFromIB()
         }
@@ -47,16 +47,15 @@ class VCardView: UIView {
         }
     }
     
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        setupView()
+        updateViewsFromIB()
     }
     
-//    override func draw(_ rect: CGRect) {
-//        super.draw(rect)
-//        setupView()
-//    }
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
 }
 
 extension VCardView: BaseViewProtocol {

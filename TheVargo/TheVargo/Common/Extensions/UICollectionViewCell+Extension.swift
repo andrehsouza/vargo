@@ -1,9 +1,9 @@
 //
-//  UITableViewCell+Extension.swift
-//  WalletStone
+//  UICollectionViewCell+Extension.swift
+//  TheVargo
 //
-//  Created by Andre on 12/06/2018.
-//  Copyright © 2018 Andre. All rights reserved.
+//  Created by Andre Souza on 09/07/2018.
+//  Copyright © 2018 AndreSamples. All rights reserved.
 //
 
 import UIKit
@@ -17,8 +17,6 @@ extension ReusableView where Self: UIView {
     }
 }
 
-extension UITableViewCell: ReusableView { }
-
 protocol NibLoadableView: class { }
 
 extension NibLoadableView where Self: UIView {
@@ -27,3 +25,5 @@ extension NibLoadableView where Self: UIView {
         return identifier
     }
 }
+
+extension UICollectionViewCell: ReusableView, NibLoadableView { }

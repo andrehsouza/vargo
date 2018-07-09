@@ -59,13 +59,13 @@ class VButton: UIButton {
     
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        setupView()
+        updateViewsFromIB()
     }
     
-//    override public func draw(_ rect: CGRect) {
-//        super.draw(rect)
-//        setupButton()
-//    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
     
 }
 
