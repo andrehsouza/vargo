@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ViewInterface: class {
-    
-}
+protocol ViewInterface: class { }
+
+extension ViewInterface { }

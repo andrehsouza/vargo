@@ -28,6 +28,7 @@
 		7B64586E20F3CA5E0016557C /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586D20F3CA5E0016557C /* UICollectionView+Extension.swift */; };
 		7B64587020F3CA850016557C /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586F20F3CA850016557C /* UICollectionViewCell+Extension.swift */; };
 		7B6458AE20F3F7C60016557C /* VSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6458AD20F3F7C60016557C /* VSplitViewController.swift */; };
+		7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6458AF20F3FF9B0016557C /* VBaseViewController.swift */; };
 		7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */; };
 		7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FE120EFA631003E2DCE /* TheVargo.xcdatamodeld */; };
 		7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FEB20EFA633003E2DCE /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		7B64586D20F3CA5E0016557C /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		7B64586F20F3CA850016557C /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		7B6458AD20F3F7C60016557C /* VSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSplitViewController.swift; sourceTree = "<group>"; };
+		7B6458AF20F3FF9B0016557C /* VBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VBaseViewController.swift; sourceTree = "<group>"; };
 		7BD90FDC20EFA631003E2DCE /* TheVargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD90FE220EFA631003E2DCE /* TheVargo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheVargo.xcdatamodel; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		7BD9102020EFB521003E2DCE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7B6458AF20F3FF9B0016557C /* VBaseViewController.swift */,
 				7BD9102120EFB534003E2DCE /* BaseWireframe.swift */,
 				7BD9102520EFB644003E2DCE /* ViewInterface.swift */,
 				7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */,
@@ -427,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
+				7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */,
 				7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */,
 				7B64586C20F3C8930016557C /* Article.swift in Sources */,
 				7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */,

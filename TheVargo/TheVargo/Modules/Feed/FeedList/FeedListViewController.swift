@@ -10,7 +10,7 @@
 
 import UIKit
 
-final class FeedListViewController: UIViewController {
+final class FeedListViewController: VBaseViewController {
 
     // MARK: - Public properties -
 
@@ -21,9 +21,23 @@ final class FeedListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
 
 // MARK: - Extensions -
 
 extension FeedListViewController: FeedListViewInterface {
+    
+    func showArticles(_ articles: [Article]) {
+        //TODO
+    }
+    
+    func showLoading(_ loading: Bool) {
+        showLoadingView(loading)
+    }
+    
+    func showError(message: String, target: Any, action: Selector) {
+        showError(message: message, target: target, action: action)
+    }
+    
 }

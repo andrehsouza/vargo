@@ -11,6 +11,14 @@
 import UIKit
 
 enum FeedListNavigationOption {
+    case detail
+    
+//    var viewController: UIViewController {
+//        switch self {
+//        case .detail:
+//            return
+//        }
+//    }
 }
 
 protocol FeedListWireframeInterface: WireframeInterface {
@@ -18,6 +26,9 @@ protocol FeedListWireframeInterface: WireframeInterface {
 }
 
 protocol FeedListViewInterface: ViewInterface {
+    func showArticles(_ articles: [Article])
+    func showLoading(_ loading: Bool)
+    func showError(message: String, target: Any, action:Selector)
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {

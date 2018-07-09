@@ -17,6 +17,14 @@ class VFenceView: UIView {
     @IBOutlet weak var btRetry: VButton!
     @IBOutlet weak var messageLbl: UILabel!
     
+    @IBAction func touchRetry(_ sender: Any) {
+        showFenceLoadingView()
+    }
+    
+}
+
+extension VFenceView {
+    
     func showFenceLoadingView() {
         errorView.isHidden = true
         loadingView.isHidden = false
@@ -30,10 +38,6 @@ class VFenceView: UIView {
         messageLbl.text = message
         btRetry.addTarget(target, action: action, for: .touchUpInside)
         activityIndicator.stopAnimating()
-    }
-    
-    @IBAction func touchRetry(_ sender: Any) {
-        showFenceLoadingView()
     }
     
 }
