@@ -11,9 +11,11 @@ import Foundation
 protocol DescribeProtocol: class { }
 
 extension DescribeProtocol where Self: NSObject {
+    
     static var identifier: String {
         return String(describing: self)
     }
+    
 }
 
 extension NSObject: DescribeProtocol { }

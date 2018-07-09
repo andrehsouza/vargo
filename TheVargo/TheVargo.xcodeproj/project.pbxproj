@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B64584220F394C10016557C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583E20F394C00016557C /* UIView+Extension.swift */; };
+		7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583F20F394C10016557C /* UIColor+Extension.swift */; };
+		7B64584420F394C10016557C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584020F394C10016557C /* UITableView+Extension.swift */; };
+		7B64584520F394C10016557C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584120F394C10016557C /* UITableViewCell+Extension.swift */; };
+		7B64584920F395CB0016557C /* VFenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64584720F395CB0016557C /* VFenceView.xib */; };
+		7B64584A20F395CB0016557C /* VFenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584820F395CB0016557C /* VFenceView.swift */; };
+		7B64584C20F396250016557C /* VCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584B20F396250016557C /* VCardView.swift */; };
+		7B64584E20F396560016557C /* VButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584D20F396560016557C /* VButton.swift */; };
+		7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585120F39DBD0016557C /* BaseViewProtocol.swift */; };
 		7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */; };
 		7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FE120EFA631003E2DCE /* TheVargo.xcdatamodeld */; };
-		7BD90FE520EFA631003E2DCE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FE420EFA631003E2DCE /* MasterViewController.swift */; };
-		7BD90FE720EFA631003E2DCE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FE620EFA631003E2DCE /* DetailViewController.swift */; };
-		7BD90FEA20EFA631003E2DCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FE820EFA631003E2DCE /* Main.storyboard */; };
 		7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FEB20EFA633003E2DCE /* Assets.xcassets */; };
 		7BD90FEF20EFA633003E2DCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */; };
 		7BD90FFA20EFA633003E2DCE /* TheVargoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FF920EFA633003E2DCE /* TheVargoTests.swift */; };
@@ -48,12 +54,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B64583E20F394C00016557C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7B64583F20F394C10016557C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		7B64584020F394C10016557C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		7B64584120F394C10016557C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		7B64584720F395CB0016557C /* VFenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VFenceView.xib; sourceTree = "<group>"; };
+		7B64584820F395CB0016557C /* VFenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFenceView.swift; sourceTree = "<group>"; };
+		7B64584B20F396250016557C /* VCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardView.swift; sourceTree = "<group>"; };
+		7B64584D20F396560016557C /* VButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VButton.swift; sourceTree = "<group>"; };
+		7B64585120F39DBD0016557C /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		7BD90FDC20EFA631003E2DCE /* TheVargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD90FE220EFA631003E2DCE /* TheVargo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheVargo.xcdatamodel; sourceTree = "<group>"; };
-		7BD90FE420EFA631003E2DCE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		7BD90FE620EFA631003E2DCE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		7BD90FE920EFA631003E2DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BD90FEB20EFA633003E2DCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD90FEE20EFA633003E2DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD90FF020EFA633003E2DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +114,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B64583D20F394220016557C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B64585320F39F5B0016557C /* Base */,
+				7B64584620F395CB0016557C /* VFenceView */,
+				7B64584B20F396250016557C /* VCardView.swift */,
+				7B64584D20F396560016557C /* VButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B64584620F395CB0016557C /* VFenceView */ = {
+			isa = PBXGroup;
+			children = (
+				7B64584720F395CB0016557C /* VFenceView.xib */,
+				7B64584820F395CB0016557C /* VFenceView.swift */,
+			);
+			path = VFenceView;
+			sourceTree = "<group>";
+		};
+		7B64585320F39F5B0016557C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7B64585120F39DBD0016557C /* BaseViewProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		7BD90FD320EFA631003E2DCE = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +168,6 @@
 				7BD9101C20EFB312003E2DCE /* Modules */,
 				7BD9102C20EFB99E003E2DCE /* Common */,
 				7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */,
-				7BD90FE420EFA631003E2DCE /* MasterViewController.swift */,
-				7BD90FE620EFA631003E2DCE /* DetailViewController.swift */,
-				7BD90FE820EFA631003E2DCE /* Main.storyboard */,
 				7BD90FEB20EFA633003E2DCE /* Assets.xcassets */,
 				7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */,
 				7BD90FF020EFA633003E2DCE /* Info.plist */,
@@ -201,6 +238,7 @@
 		7BD9102C20EFB99E003E2DCE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7B64583D20F394220016557C /* Views */,
 				7BD9102D20EFB9BE003E2DCE /* Extensions */,
 			);
 			path = Common;
@@ -209,6 +247,10 @@
 		7BD9102D20EFB9BE003E2DCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7B64583F20F394C10016557C /* UIColor+Extension.swift */,
+				7B64584020F394C10016557C /* UITableView+Extension.swift */,
+				7B64584120F394C10016557C /* UITableViewCell+Extension.swift */,
+				7B64583E20F394C00016557C /* UIView+Extension.swift */,
 				7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */,
 				7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */,
 			);
@@ -322,7 +364,7 @@
 				7BD9102B20EFB6FA003E2DCE /* Feed.storyboard in Resources */,
 				7BD90FEF20EFA633003E2DCE /* LaunchScreen.storyboard in Resources */,
 				7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */,
-				7BD90FEA20EFA631003E2DCE /* Main.storyboard in Resources */,
+				7B64584920F395CB0016557C /* VFenceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,16 +391,22 @@
 			files = (
 				7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */,
 				7BD9102220EFB534003E2DCE /* BaseWireframe.swift in Sources */,
+				7B64584220F394C10016557C /* UIView+Extension.swift in Sources */,
 				7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */,
+				7B64584C20F396250016557C /* VCardView.swift in Sources */,
+				7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */,
+				7B64584A20F395CB0016557C /* VFenceView.swift in Sources */,
 				7BD9101A20EFB2DC003E2DCE /* ArticleInteractor.swift in Sources */,
 				7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */,
+				7B64584520F394C10016557C /* UITableViewCell+Extension.swift in Sources */,
 				7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */,
 				7BD9101920EFB2DC003E2DCE /* ArticleViewController.swift in Sources */,
 				7BD9102F20EFBD82003E2DCE /* UIStoryboard+Extension.swift in Sources */,
 				7BD9101B20EFB2DC003E2DCE /* ArticleWireframe.swift in Sources */,
-				7BD90FE520EFA631003E2DCE /* MasterViewController.swift in Sources */,
+				7B64584420F394C10016557C /* UITableView+Extension.swift in Sources */,
+				7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */,
+				7B64584E20F396560016557C /* VButton.swift in Sources */,
 				7BD9101820EFB2DC003E2DCE /* ArticlePresenter.swift in Sources */,
-				7BD90FE720EFA631003E2DCE /* DetailViewController.swift in Sources */,
 				7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */,
 				7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */,
 				7BD9101720EFB2DC003E2DCE /* ArticleInterfaces.swift in Sources */,
@@ -397,14 +445,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7BD90FE820EFA631003E2DCE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BD90FE920EFA631003E2DCE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
