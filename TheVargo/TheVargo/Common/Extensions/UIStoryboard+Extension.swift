@@ -12,7 +12,7 @@ import UIKit
 
 enum StoryboardType: String {
     
-    case login = "Feed"
+    case feed = "Feed"
     
     var name: String {
         return rawValue

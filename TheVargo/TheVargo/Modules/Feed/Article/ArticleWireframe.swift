@@ -14,7 +14,7 @@ final class ArticleWireframe: BaseWireframe {
 
     // MARK: - Private properties -
 
-    private let _storyboard = UIStoryboard(name: "Feed", bundle: nil)
+    private let _storyboard = UIStoryboard(type: .feed)
 
     // MARK: - Module setup -
 
