@@ -16,7 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navigationMaster = VNavigationController()
+        navigationMaster.setRootWireframe(FeedListWireframe())
+        
+        let navigationDetail = VNavigationController()
+        navigationDetail.setRootWireframe(FeedDetailWireframe())
+        
+        let splitViewController = VSplitViewController()
+        splitViewController.viewControllers = [navigationMaster, navigationDetail]
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = splitViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

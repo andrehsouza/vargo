@@ -22,6 +22,6 @@ public extension UIColor {
         self.init(red:(colorHex >> 16) & 0xff, green:(colorHex >> 8) & 0xff, blue:colorHex & 0xff)
     }
     
-    static let background  = UIColor(colorHex:0xD5EDEB)
+    static let mainColor  = UIColor(colorHex:0xD5EDEB)
     static let viewFill    = UIColor(colorHex:0xBFE2D9)
 }

@@ -17,21 +17,16 @@ final class FeedListWireframe: BaseWireframe {
     private let _storyboard = UIStoryboard(type: .feed)
 
     // MARK: - Module setup -
-
-    func configureModule(with viewController: FeedListViewController) {
-        let interactor = FeedListInteractor()
-        let presenter = FeedListPresenter(wireframe: self, view: viewController, interactor: interactor)
-        viewController.presenter = presenter
-    }
-
-    // MARK: - Transitions -
-
-    func show(with transition: Transition, animated: Bool = true) {
+    
+    init() {
         let moduleViewController = _storyboard.instantiateViewController(ofType: FeedListViewController.self)
-        configureModule(with: moduleViewController)
-
-        show(moduleViewController, with: transition, animated: animated)
+        super.init(viewController: moduleViewController)
+        
+        let interactor = FeedListInteractor()
+        let presenter = FeedListPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
+        moduleViewController.presenter = presenter
     }
+
 }
 
 // MARK: - Extensions -
@@ -39,10 +34,6 @@ final class FeedListWireframe: BaseWireframe {
 extension FeedListWireframe: FeedListWireframeInterface {
 
     func navigate(to option: FeedListNavigationOption) {
-        switch option {
-        case .detail:
-            let wireframe = FeedDetailWireframe(navigationController: self.navigationController)
-            wireframe.show(with: .push)
-        }
+        show(option.wireframe, with: .push, animated: true)
     }
 }

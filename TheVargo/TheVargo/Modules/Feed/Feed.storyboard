@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eLm-0s-J0H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,27 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Y1Y-ck-JT4">
-            <objects>
-                <navigationController id="6t4-ms-6ne" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FgD-x7-NFU">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xat-dJ-auN" kind="relationship" relationship="rootViewController" id="WhV-dp-QkF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gWM-11-wZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1782" y="-700"/>
-        </scene>
         <!--Title-->
         <scene sceneID="wJm-bK-tPW">
             <objects>
-                <viewController id="xat-dJ-auN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedListViewController" id="xat-dJ-auN" customClass="FeedListViewController" customModule="TheVargo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vtf-jh-dHV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +45,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="DWf-nd-cuS" kind="show" id="57D-oA-T5q"/>
+                                    <action selector="touchButton:" destination="xat-dJ-auN" eventType="touchUpInside" id="fPo-RH-9Jy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,43 +56,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWf-a4-Zhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2847" y="-700"/>
-        </scene>
-        <!--Split View Controller-->
-        <scene sceneID="4fu-bS-4H1">
-            <objects>
-                <splitViewController id="eLm-0s-J0H" customClass="VSplitViewController" customModule="TheVargo" customModuleProvider="target" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="6t4-ms-6ne" kind="relationship" relationship="masterViewController" id="cSV-VZ-w3C"/>
-                        <segue destination="DWf-nd-cuS" kind="relationship" relationship="detailViewController" id="3oc-Wz-Hjs"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aHx-yE-Gyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="831" y="-363"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bY4-Rs-7kO">
-            <objects>
-                <navigationController id="DWf-nd-cuS" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dGj-dO-v9U">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Lq5-8p-9OD" kind="relationship" relationship="rootViewController" id="KHJ-BA-RZo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="96z-yj-63I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1782" y="90"/>
+            <point key="canvasLocation" x="1998" y="-519"/>
         </scene>
         <!--Detalhe-->
         <scene sceneID="s3q-fc-pQY">
             <objects>
-                <viewController id="Lq5-8p-9OD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedDetailViewController" id="Lq5-8p-9OD" customClass="FeedDetailViewController" customModule="TheVargo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j8i-rK-8A4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,10 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9q-1t-hn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="90"/>
+            <point key="canvasLocation" x="3014" y="-519"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="3oc-Wz-Hjs"/>
-    </inferredMetricsTieBreakers>
 </document>

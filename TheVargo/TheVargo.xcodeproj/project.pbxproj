@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79220F4516200B9A3BB /* VNavigationController.swift */; };
+		30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */; };
 		7B64584220F394C10016557C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583E20F394C00016557C /* UIView+Extension.swift */; };
 		7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583F20F394C10016557C /* UIColor+Extension.swift */; };
 		7B64584920F395CB0016557C /* VFenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64584720F395CB0016557C /* VFenceView.xib */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
+		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		7B64583E20F394C00016557C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7B64583F20F394C10016557C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7B64584720F395CB0016557C /* VFenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VFenceView.xib; sourceTree = "<group>"; };
@@ -130,6 +134,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30D2C79620F4519F00B9A3BB /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				7BD9102120EFB534003E2DCE /* BaseWireframe.swift */,
+				7BD9102520EFB644003E2DCE /* ViewInterface.swift */,
+				7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */,
+				7BD9102720EFB671003E2DCE /* InteractorInterface.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
 		7B64583D20F394220016557C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +261,7 @@
 		7BD9101C20EFB312003E2DCE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				30D2C79620F4519F00B9A3BB /* VIPER */,
 				7BD9102020EFB521003E2DCE /* Base */,
 				7BD9102920EFB6D8003E2DCE /* Feed */,
 			);
@@ -256,10 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				7B6458AF20F3FF9B0016557C /* VBaseViewController.swift */,
-				7BD9102120EFB534003E2DCE /* BaseWireframe.swift */,
-				7BD9102520EFB644003E2DCE /* ViewInterface.swift */,
-				7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */,
-				7BD9102720EFB671003E2DCE /* InteractorInterface.swift */,
+				30D2C79220F4516200B9A3BB /* VNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -293,6 +306,7 @@
 				7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */,
 				7B64586D20F3CA5E0016557C /* UICollectionView+Extension.swift */,
 				7B64586F20F3CA850016557C /* UICollectionViewCell+Extension.swift */,
+				30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */,
 				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
 				7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */,
 				7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */,
@@ -439,6 +454,7 @@
 				7B64587020F3CA850016557C /* UICollectionViewCell+Extension.swift in Sources */,
 				7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */,
 				7B64586520F3AA580016557C /* FeedDetailInterfaces.swift in Sources */,
+				30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */,
 				7B64586E20F3CA5E0016557C /* UICollectionView+Extension.swift in Sources */,
 				7B64584C20F396250016557C /* VCardView.swift in Sources */,
 				7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */,

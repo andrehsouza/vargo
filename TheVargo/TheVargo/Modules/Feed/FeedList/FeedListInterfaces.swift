@@ -13,12 +13,12 @@ import UIKit
 enum FeedListNavigationOption {
     case detail
     
-//    var viewController: UIViewController {
-//        switch self {
-//        case .detail:
-//            return
-//        }
-//    }
+    var wireframe: BaseWireframe {
+        switch self {
+        case .detail:
+            return FeedDetailWireframe()
+        }
+    }
 }
 
 protocol FeedListWireframeInterface: WireframeInterface {
@@ -32,6 +32,7 @@ protocol FeedListViewInterface: ViewInterface {
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {
+    func didPressButton()
 }
 
 protocol FeedListInteractorInterface: InteractorInterface {

@@ -32,4 +32,9 @@ final class FeedListPresenter {
 // MARK: - Extensions -
 
 extension FeedListPresenter: FeedListPresenterInterface {
+    
+    func didPressButton() {
+        _wireframe.navigate(to: .detail)
+    }
+    
 }

@@ -21,6 +21,11 @@ final class FeedListViewController: VBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction func touchButton(_ sender: Any) {
+        presenter.didPressButton()
+    }
+    
     
 }
 

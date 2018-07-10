@@ -17,21 +17,16 @@ final class FeedDetailWireframe: BaseWireframe {
     private let _storyboard = UIStoryboard(type: .feed)
 
     // MARK: - Module setup -
-
-    func configureModule(with viewController: FeedDetailViewController) {
-        let interactor = FeedDetailInteractor()
-        let presenter = FeedDetailPresenter(wireframe: self, view: viewController, interactor: interactor)
-        viewController.presenter = presenter
-    }
-
-    // MARK: - Transitions -
-
-    func show(with transition: Transition, animated: Bool = true) {
+    
+    init() {
         let moduleViewController = _storyboard.instantiateViewController(ofType: FeedDetailViewController.self)
-        configureModule(with: moduleViewController)
-
-        show(moduleViewController, with: transition, animated: animated)
+        super.init(viewController: moduleViewController)
+        
+        let interactor = FeedDetailInteractor()
+        let presenter = FeedDetailPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
+        moduleViewController.presenter = presenter
     }
+
 }
 
 // MARK: - Extensions -
