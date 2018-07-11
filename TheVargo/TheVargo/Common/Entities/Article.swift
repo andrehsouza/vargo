@@ -8,12 +8,24 @@
 
 import Foundation
 
-struct Article {
+struct Article: Decodable, FeedProtocol {
+    var content: FeedContent {
+        return .article
+    }
     var date: String?
     var title: String?
     var website: String?
     var authors: String?
-    var content: String?
+    var text: String?
     var imageUrl: String?
-    var videoUrl: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case date
+        case title
+        case website
+        case authors
+        case text
+        case imageUrl
+    }
+    
 }

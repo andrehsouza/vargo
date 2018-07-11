@@ -10,7 +10,7 @@ import UIKit
 
 extension UICollectionView {
     
-    func register<T: UICollectionViewCell>(_: T.Type) where T: NibLoadableView {
+    func register<T: UICollectionViewCell>(_: T.Type) {
         let Nib = UINib(nibName: T.nibName, bundle: nil)
         register(Nib, forCellWithReuseIdentifier: T.reuseIdentifier)
     }

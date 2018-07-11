@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304F553E20F5979900111E6D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553D20F5979900111E6D /* Video.swift */; };
+		304F554020F597E700111E6D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553F20F597E700111E6D /* Feed.swift */; };
 		30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79220F4516200B9A3BB /* VNavigationController.swift */; };
 		30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */; };
 		7B64584220F394C10016557C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583E20F394C00016557C /* UIView+Extension.swift */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		304F553D20F5979900111E6D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		304F553F20F597E700111E6D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
 		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		7B64583E20F394C00016557C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -201,7 +205,9 @@
 		7B64586A20F3C82E0016557C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				304F553F20F597E700111E6D /* Feed.swift */,
 				7B64586B20F3C8930016557C /* Article.swift */,
+				304F553D20F5979900111E6D /* Video.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -447,6 +453,7 @@
 				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
 				7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */,
 				7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */,
+				304F554020F597E700111E6D /* Feed.swift in Sources */,
 				7B64586C20F3C8930016557C /* Article.swift in Sources */,
 				7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */,
 				7BD9102220EFB534003E2DCE /* BaseWireframe.swift in Sources */,
@@ -472,6 +479,7 @@
 				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,
 				7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */,
 				7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */,
+				304F553E20F5979900111E6D /* Video.swift in Sources */,
 				7B6458AE20F3F7C60016557C /* VSplitViewController.swift in Sources */,
 				7B64585E20F3AA1F0016557C /* FeedListInteractor.swift in Sources */,
 			);

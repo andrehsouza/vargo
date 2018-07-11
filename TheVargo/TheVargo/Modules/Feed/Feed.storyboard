@@ -48,15 +48,47 @@
                                     <action selector="touchButton:" destination="xat-dJ-auN" eventType="touchUpInside" id="fPo-RH-9Jy"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1i5-bs-eic" customClass="VCardView" customModule="TheVargo" customModuleProvider="target">
+                                <rect key="frame" x="15" y="35" width="345" height="168"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="3k6-bd-di8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layerBackgroundColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jrh-EY-PDp" firstAttribute="trailing" secondItem="1i5-bs-eic" secondAttribute="trailing" constant="15" id="ggK-99-Lip"/>
+                            <constraint firstItem="1i5-bs-eic" firstAttribute="leading" secondItem="Jrh-EY-PDp" secondAttribute="leading" constant="15" id="gmY-vU-WSp"/>
+                            <constraint firstItem="1i5-bs-eic" firstAttribute="top" secondItem="Jrh-EY-PDp" secondAttribute="top" constant="15" id="le6-aZ-9g1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jrh-EY-PDp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="b5K-Qs-Nen"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWf-a4-Zhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="-519"/>
+            <point key="canvasLocation" x="1997.5999999999999" y="-519.49025487256381"/>
         </scene>
         <!--Detalhe-->
         <scene sceneID="s3q-fc-pQY">
