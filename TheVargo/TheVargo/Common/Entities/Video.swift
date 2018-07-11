@@ -8,18 +8,11 @@
 
 import Foundation
 
-struct Video: Decodable, FeedProtocol {
-    var content: FeedContent {
-        return .video
-    }
+struct Video: Decodable {
+    
+    var title: String?
     var thumbnail: String?
     var videoUrl: String
-    var relatedVideo: [Video]?
-    
-    private enum CodingKeys: String, CodingKey {
-        case thumbnail
-        case videoUrl
-        case relatedVideo
-    }
+    var relatedVideos: String?
     
 }

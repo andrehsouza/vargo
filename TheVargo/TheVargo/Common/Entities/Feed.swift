@@ -8,36 +8,42 @@
 
 import Foundation
 
-enum FeedContent: String, Decodable {
-    case article = "article"
-    case video = "video"
+enum FeedContent: Decodable {
+    case article(Article)
+    case video(Video)
 }
 
-protocol FeedProtocol: Decodable {
-    var content: FeedContent { get }
+extension FeedContent {
+    enum CodingKeys: String, CodingKey {
+        case article, video
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        if let swifter = try container.decodeIfPresent(Article.self, forKey: .article) {
+            self = .article(swifter)
+        } else {
+            self = .video(try container.decode(Video.self, forKey: .video))
+        }
+    }
 }
 
 struct Feed: Decodable {
     var page: Int
-    var totalResults: Int
-    var items: [FeedProtocol]
-    
-    enum FeedKey: CodingKey {
-        case items
-    }
+    var totalPages: Int
+    var items: [FeedContent]
     
     enum CodingKeys: String, CodingKey {
         case page
-        case totalResults
+        case totalPages
         case items
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        let page: Int = try container.decode(Int.self, forKey: .page)
-        let totalResults: Int = try container.decode(Int.self, forKey: .totalResults)
-        let items: [FeedProtocol] = try container.decode(FeedProtocol.self, forKey: .items)
-        
+        self.page = try container.decode(Int.self, forKey: .page)
+        self.totalPages = try container.decode(Int.self, forKey: .totalPages)
+        self.items = try container.decode([FeedContent].self, forKey: .items)
     }
     
 }
