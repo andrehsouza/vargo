@@ -11,6 +11,11 @@
 		304F554020F597E700111E6D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553F20F597E700111E6D /* Feed.swift */; };
 		30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79220F4516200B9A3BB /* VNavigationController.swift */; };
 		30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */; };
+		7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2820F69C06001E848B /* ErrorResponse.swift */; };
+		7B62BA2B20F69D5B001E848B /* RequestResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2A20F69D5B001E848B /* RequestResultType.swift */; };
+		7B62BA2D20F69E95001E848B /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2C20F69E95001E848B /* FeedService.swift */; };
+		7B62BA3120F6A26C001E848B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA3020F6A26C001E848B /* APIService.swift */; };
+		7B62BA3320F6A93D001E848B /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA3220F6A93D001E848B /* ResponseType.swift */; };
 		7B64584220F394C10016557C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583E20F394C00016557C /* UIView+Extension.swift */; };
 		7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583F20F394C10016557C /* UIColor+Extension.swift */; };
 		7B64584920F395CB0016557C /* VFenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64584720F395CB0016557C /* VFenceView.xib */; };
@@ -74,6 +79,11 @@
 		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
 		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheVargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B62BA2820F69C06001E848B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		7B62BA2A20F69D5B001E848B /* RequestResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResultType.swift; sourceTree = "<group>"; };
+		7B62BA2C20F69E95001E848B /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		7B62BA3020F6A26C001E848B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7B62BA3220F6A93D001E848B /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		7B64583E20F394C00016557C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7B64583F20F394C10016557C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7B64584720F395CB0016557C /* VFenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VFenceView.xib; sourceTree = "<group>"; };
@@ -152,6 +162,25 @@
 				7BD9102720EFB671003E2DCE /* InteractorInterface.swift */,
 			);
 			path = VIPER;
+			sourceTree = "<group>";
+		};
+		7B62BA2720F69B8C001E848B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7B62BA3020F6A26C001E848B /* APIService.swift */,
+				7B62BA2C20F69E95001E848B /* FeedService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7B62BA3620F6B662001E848B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B62BA2820F69C06001E848B /* ErrorResponse.swift */,
+				7B62BA3220F6A93D001E848B /* ResponseType.swift */,
+				7B62BA2A20F69D5B001E848B /* RequestResultType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7B64583D20F394220016557C /* Views */ = {
@@ -303,6 +332,8 @@
 		7BD9102C20EFB99E003E2DCE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7B62BA2720F69B8C001E848B /* Service */,
+				7B62BA3620F6B662001E848B /* Model */,
 				7B64586A20F3C82E0016557C /* Entities */,
 				7B64583D20F394220016557C /* Views */,
 				7BD9102D20EFB9BE003E2DCE /* Extensions */,
@@ -528,11 +559,14 @@
 				7B64587020F3CA850016557C /* UICollectionViewCell+Extension.swift in Sources */,
 				7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */,
 				7B64586520F3AA580016557C /* FeedDetailInterfaces.swift in Sources */,
+				7B62BA2B20F69D5B001E848B /* RequestResultType.swift in Sources */,
 				30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */,
 				7B64586E20F3CA5E0016557C /* UICollectionView+Extension.swift in Sources */,
 				7B64584C20F396250016557C /* VCardView.swift in Sources */,
 				7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */,
+				7B62BA2D20F69E95001E848B /* FeedService.swift in Sources */,
 				7B64585D20F3AA1F0016557C /* FeedListViewController.swift in Sources */,
+				7B62BA3120F6A26C001E848B /* APIService.swift in Sources */,
 				7B64584A20F395CB0016557C /* VFenceView.swift in Sources */,
 				7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */,
 				7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */,
@@ -541,7 +575,9 @@
 				7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */,
 				7B64584E20F396560016557C /* VButton.swift in Sources */,
 				7B64585C20F3AA1F0016557C /* FeedListPresenter.swift in Sources */,
+				7B62BA3320F6A93D001E848B /* ResponseType.swift in Sources */,
 				7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */,
+				7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */,
 				7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */,
 				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,
 				7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */,
