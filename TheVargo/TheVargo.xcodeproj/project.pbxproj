@@ -46,6 +46,7 @@
 		7BD9102B20EFB6FA003E2DCE /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD9102A20EFB6FA003E2DCE /* Feed.storyboard */; };
 		7BD9102F20EFBD82003E2DCE /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */; };
 		7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */; };
+		BB66A1C1709469079163ACAB /* Pods_TheVargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +67,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4E52A848D90BAA3F5C7E7C /* Pods-TheVargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVargo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo.release.xcconfig"; sourceTree = "<group>"; };
+		27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVargo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo.debug.xcconfig"; sourceTree = "<group>"; };
 		304F553D20F5979900111E6D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		304F553F20F597E700111E6D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
 		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheVargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B64583E20F394C00016557C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7B64583F20F394C10016557C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7B64584720F395CB0016557C /* VFenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VFenceView.xib; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB66A1C1709469079163ACAB /* Pods_TheVargo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +224,8 @@
 				7BD90FF820EFA633003E2DCE /* TheVargoTests */,
 				7BD9100320EFA633003E2DCE /* TheVargoUITests */,
 				7BD90FDD20EFA631003E2DCE /* Products */,
+				A9AE3693EDC0E6B7BAF1CC36 /* Pods */,
+				D5FE0FAA92104EE3A58F5E33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,6 +324,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A9AE3693EDC0E6B7BAF1CC36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */,
+				1D4E52A848D90BAA3F5C7E7C /* Pods-TheVargo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5FE0FAA92104EE3A58F5E33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BD9100920EFA633003E2DCE /* Build configuration list for PBXNativeTarget "TheVargo" */;
 			buildPhases = (
+				4B1E9B0080073CC8BCD2BA0E /* [CP] Check Pods Manifest.lock */,
 				7BD90FD820EFA631003E2DCE /* Sources */,
 				7BD90FD920EFA631003E2DCE /* Frameworks */,
 				7BD90FDA20EFA631003E2DCE /* Resources */,
+				C5228F02E97558DEA08A2CF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -443,6 +469,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B1E9B0080073CC8BCD2BA0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheVargo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5228F02E97558DEA08A2CF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BD90FD820EFA631003E2DCE /* Sources */ = {
@@ -644,6 +711,7 @@
 		};
 		7BD9100A20EFA633003E2DCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -662,6 +730,7 @@
 		};
 		7BD9100B20EFA633003E2DCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D4E52A848D90BAA3F5C7E7C /* Pods-TheVargo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
