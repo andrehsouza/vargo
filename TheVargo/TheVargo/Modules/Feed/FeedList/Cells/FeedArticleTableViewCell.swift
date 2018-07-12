@@ -11,6 +11,7 @@ import AlamofireImage
 
 class FeedArticleTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var cellImageViewPlayer: UIImageView!
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellBookMarkButton: UIButton!
     @IBOutlet weak var cellTitleLabel: UILabel!
@@ -24,7 +25,8 @@ class FeedArticleTableViewCell: UITableViewCell {
             } else {
                 cellImageView.image = #imageLiteral(resourceName: "ic_place_holder")
             }
-
+            
+            cellImageViewPlayer.isHidden = !(item?.isVideo ?? false)
             cellTitleLabel.text = item?.title
             cellDescriptionLabel.text = item?.description
             cellBookMarkButton.isSelected = item?.isMarked ?? false

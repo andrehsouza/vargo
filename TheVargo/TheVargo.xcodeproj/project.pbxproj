@@ -18,6 +18,8 @@
 		7B54730020F78F7200AB0278 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5472FF20F78F7200AB0278 /* UITableView+Extension.swift */; };
 		7B54730220F78FA200AB0278 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730120F78FA200AB0278 /* UITableViewCell+Extension.swift */; };
 		7B54730420F79A7D00AB0278 /* FeedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730320F79A7D00AB0278 /* FeedContent.swift */; };
+		7B54730620F7EF9700AB0278 /* VImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730520F7EF9700AB0278 /* VImageView.swift */; };
+		7B54730820F7F17100AB0278 /* VUIVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730720F7F17100AB0278 /* VUIVisualEffectView.swift */; };
 		7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2820F69C06001E848B /* ErrorResponse.swift */; };
 		7B62BA2B20F69D5B001E848B /* RequestResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2A20F69D5B001E848B /* RequestResultType.swift */; };
 		7B62BA2D20F69E95001E848B /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2C20F69E95001E848B /* FeedService.swift */; };
@@ -91,6 +93,8 @@
 		7B5472FF20F78F7200AB0278 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7B54730120F78FA200AB0278 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		7B54730320F79A7D00AB0278 /* FeedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContent.swift; sourceTree = "<group>"; };
+		7B54730520F7EF9700AB0278 /* VImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VImageView.swift; sourceTree = "<group>"; };
+		7B54730720F7F17100AB0278 /* VUIVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIVisualEffectView.swift; sourceTree = "<group>"; };
 		7B62BA2820F69C06001E848B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		7B62BA2A20F69D5B001E848B /* RequestResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResultType.swift; sourceTree = "<group>"; };
 		7B62BA2C20F69E95001E848B /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				7B64585320F39F5B0016557C /* Base */,
 				7B64584620F395CB0016557C /* VFenceView */,
 				7B64584B20F396250016557C /* VCardView.swift */,
+				7B54730720F7F17100AB0278 /* VUIVisualEffectView.swift */,
+				7B54730520F7EF9700AB0278 /* VImageView.swift */,
 				7B64584D20F396560016557C /* VButton.swift */,
 				7B6458AD20F3F7C60016557C /* VSplitViewController.swift */,
 			);
@@ -596,6 +602,7 @@
 				7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */,
 				7B64586520F3AA580016557C /* FeedDetailInterfaces.swift in Sources */,
 				7B62BA2B20F69D5B001E848B /* RequestResultType.swift in Sources */,
+				7B54730820F7F17100AB0278 /* VUIVisualEffectView.swift in Sources */,
 				30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */,
 				7B64584C20F396250016557C /* VCardView.swift in Sources */,
 				7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */,
@@ -613,6 +620,7 @@
 				7B64585C20F3AA1F0016557C /* FeedListPresenter.swift in Sources */,
 				7B62BA3320F6A93D001E848B /* ResponseType.swift in Sources */,
 				7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */,
+				7B54730620F7EF9700AB0278 /* VImageView.swift in Sources */,
 				7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */,
 				7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */,
 				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,

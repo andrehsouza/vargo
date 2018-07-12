@@ -11,7 +11,13 @@ import UIKit
 @IBDesignable
 class VCardView: UIView {
 
-    @IBInspectable var cornerRadius: CGFloat = 2 {
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            updateViewsFromIB()
+        }
+    }
+    
+    @IBInspectable var radiusOnlyBottom: Bool = false {
         didSet {
             updateViewsFromIB()
         }
@@ -62,8 +68,11 @@ extension VCardView: BaseViewProtocol {
     
     func setupView() {
         layer.cornerRadius = cornerRadius
+        if radiusOnlyBottom {
+           layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        }
+        layer.masksToBounds = true
         layer.borderColor = borderColor?.cgColor
-        layer.masksToBounds = false
         layer.borderWidth = borderWidth
         layer.backgroundColor = layerBackgroundColor?.cgColor
         //Shadow

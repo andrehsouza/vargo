@@ -26,6 +26,7 @@ final class FeedListViewController: VBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Vargo"
         presenter.viewDidLoad()
     }
     
@@ -62,7 +63,7 @@ extension FeedListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 185
     }
     
 }

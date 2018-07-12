@@ -34,6 +34,15 @@ extension FeedContent {
 
 extension FeedContent: FeedItemInterface {
     
+    var isVideo: Bool {
+        switch self {
+        case .article(_):
+            return false
+        case .video(_):
+            return true
+        }
+    }
+    
     var title: String? {
         switch self {
         case .article(let article):

@@ -40,4 +40,5 @@ protocol FeedItemInterface {
     var description: String? { get }
     var imageURL: String? { get }
     var isMarked: Bool { get }
+    var isVideo: Bool { get }
 }
