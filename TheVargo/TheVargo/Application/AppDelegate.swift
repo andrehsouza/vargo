@@ -13,9 +13,14 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
+    
+    lazy var initializers: [Initializable] = [
+        ThemeInitializer()
+    ]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        initializers.forEach { $0.performInitialization() }
         
         let navigationMaster = VNavigationController()
         navigationMaster.setRootWireframe(FeedListWireframe())

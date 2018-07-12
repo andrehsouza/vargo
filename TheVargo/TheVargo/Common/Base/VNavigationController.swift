@@ -12,16 +12,6 @@ class VNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigation()
     }
 
-}
-
-extension VNavigationController {
-    
-    private func setupNavigation() {
-        navigationBar.barTintColor = .mainColor
-        navigationBar.prefersLargeTitles = true
-    }
-    
 }
