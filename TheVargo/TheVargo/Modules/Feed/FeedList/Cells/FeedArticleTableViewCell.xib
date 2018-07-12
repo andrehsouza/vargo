@@ -22,8 +22,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-TR-yBK" customClass="VCardView" customModule="TheVargo" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="338" height="139.5"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place_holder" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-7p-Dhh">
-                                <rect key="frame" x="20" y="0.0" width="298" height="139.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place_holder" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-7p-Dhh">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="139.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-B1-cpF">
                                 <rect key="frame" x="302" y="15" width="21" height="22"/>
@@ -68,14 +68,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Th6-7p-Dhh" secondAttribute="trailing" constant="20" id="0PE-3i-Uwf"/>
+                            <constraint firstAttribute="trailing" secondItem="Th6-7p-Dhh" secondAttribute="trailing" id="0PE-3i-Uwf"/>
                             <constraint firstAttribute="bottom" secondItem="8kr-Hb-Wwu" secondAttribute="bottom" id="Ufi-Up-P3O"/>
                             <constraint firstItem="kxy-B1-cpF" firstAttribute="top" secondItem="hkO-TR-yBK" secondAttribute="top" constant="15" id="XWl-wa-Hjn"/>
                             <constraint firstAttribute="trailing" secondItem="kxy-B1-cpF" secondAttribute="trailing" constant="15" id="gyd-xA-tvi"/>
                             <constraint firstItem="Th6-7p-Dhh" firstAttribute="top" secondItem="hkO-TR-yBK" secondAttribute="top" id="h5o-9V-wkk"/>
                             <constraint firstItem="8kr-Hb-Wwu" firstAttribute="leading" secondItem="hkO-TR-yBK" secondAttribute="leading" id="nx9-g2-2F5"/>
                             <constraint firstAttribute="trailing" secondItem="8kr-Hb-Wwu" secondAttribute="trailing" id="rfq-hz-VN2"/>
-                            <constraint firstItem="Th6-7p-Dhh" firstAttribute="leading" secondItem="hkO-TR-yBK" secondAttribute="leading" constant="20" id="uUr-uq-UQW"/>
+                            <constraint firstItem="Th6-7p-Dhh" firstAttribute="leading" secondItem="hkO-TR-yBK" secondAttribute="leading" id="uUr-uq-UQW"/>
                             <constraint firstAttribute="bottom" secondItem="Th6-7p-Dhh" secondAttribute="bottom" id="wvb-oP-EQm"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

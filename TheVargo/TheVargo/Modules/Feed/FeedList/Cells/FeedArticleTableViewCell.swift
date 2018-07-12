@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import AlamofireImage
+import AlamofireImage
 
 class FeedArticleTableViewCell: UITableViewCell {
     
@@ -19,12 +19,12 @@ class FeedArticleTableViewCell: UITableViewCell {
     
     var item: FeedItemInterface? {
         didSet {
-//            if let url = item?.imageURL {
-//                cellImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
-//            } else {
-//                cellImageView.image = #imageLiteral(resourceName: "ic_place_holder")
-//            }
-//
+            if let urlString = item?.imageURL, let url = URL(string: urlString) {
+                cellImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
+            } else {
+                cellImageView.image = #imageLiteral(resourceName: "ic_place_holder")
+            }
+
             cellTitleLabel.text = item?.title
             cellDescriptionLabel.text = item?.description
             cellBookMarkButton.isSelected = item?.isMarked ?? false

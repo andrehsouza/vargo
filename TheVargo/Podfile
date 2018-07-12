@@ -5,6 +5,7 @@ def shared_pods
     
     pod 'Alamofire'
     pod 'TPKeyboardAvoiding'
+    pod 'AlamofireImage'
     
 end
 
