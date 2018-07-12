@@ -26,23 +26,8 @@ final class FeedListViewController: VBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
-
-//    @IBAction func touchButton(_ sender: Any) {
-////        presenter.didPressButton()
-//        let feedService = FeedService()
-//        feedService.get(page: 1, completion: { result in
-//            switch result {
-//            case .success(let feed):
-//                debugPrint("SUCESSO!!!!!")
-//                break
-//            case .failure(let errorResponse):
-//                debugPrint("ERRO!!!!! \(errorResponse)")
-//                break
-//            }
-//        })
-//    }
-    
     
 }
 
@@ -76,6 +61,10 @@ extension FeedListViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+    
 }
 
 // MARK: - UITableViewDelegate -
@@ -92,6 +81,10 @@ extension FeedListViewController: UITableViewDelegate {
 // MARK: - Extensions -
 
 extension FeedListViewController: FeedListViewInterface {
+    
+    func showError(error: ErrorInterface, target: Any, action: Selector) {
+        super.showErrorView(error: error, target: target, action: action)
+    }
     
     func reloadData() {
         tableView.reloadData()

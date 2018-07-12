@@ -31,12 +31,13 @@ extension VFenceView {
         activityIndicator.startAnimating()
     }
     
-    func showErrorView(message: String, target: Any, action:Selector) {
-        errorView.isHidden = false
+    func showErrorView(error: ErrorInterface, target: Any, action:Selector) {
+        errorView.isHidden = error.hideButton
+        messageLbl.text = error.message
         loadingView.isHidden = true
         btRetry.removeTarget(nil, action: nil, for: .allEvents)
-        messageLbl.text = message
         btRetry.addTarget(target, action: action, for: .touchUpInside)
+        btRetry.setTitle(error.buttonText, for: .normal)
         activityIndicator.stopAnimating()
     }
     

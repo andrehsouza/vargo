@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct ErrorResponse {
+protocol ErrorInterface {
+    var title: String { get }
+    var message: String { get }
+    var hideButton: Bool { get }
+    var buttonText: String { get }
+}
+
+struct ErrorResponse: ErrorInterface {
     
     var title: String = "Attention"
     var message: String = "An unexpected error has occurred, please try again in a moment."

@@ -18,7 +18,7 @@ final class FeedListPresenter {
     private let _interactor: FeedListInteractorInterface
     private let _wireframe: FeedListWireframeInterface
     
-    private var feed: Feed = Feed() {
+    private var _feed: Feed = Feed() {
         didSet {
             _view.reloadData()
         }
@@ -39,25 +39,47 @@ final class FeedListPresenter {
 
 extension FeedListPresenter: FeedListPresenterInterface {
     
+    func viewDidLoad() {
+        _view.showLoading(true)
+        _interactor.getFeeds(page: 1, completion: { [weak self] result in
+            self?._handleFeedResult(result)
+        })
+    }
+    
     func numberOfSections() -> Int {
         return 1
     }
     
     func numberOrItems(in section: Int) -> Int {
-        return feed.items?.count ?? 0
+        return _feed.items?.count ?? 0
     }
     
     func item(at indexPath: IndexPath) -> FeedItemInterface? {
-        return feed.items?[indexPath.row]
+        return _feed.items?[indexPath.row]
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        if let item = feed.items?[indexPath.row] {
+        if let item = _feed.items?[indexPath.row] {
             _wireframe.navigate(to: .detail(item))
         }
     }
     
+}
+
+// MARK: - Utility -
+
+extension FeedListPresenter {
     
-    
+    private func _handleFeedResult(_ result: RequestResultType<Feed>) {
+        switch result {
+        case .success(let feed):
+            _feed = feed
+            _view.showLoading(false)
+            break
+        case .failure(let errorResponse):
+//            _view.showError(error: errorResponse, target: self, action: <#T##Selector#>)
+            break
+        }
+    }
     
 }

@@ -21,7 +21,7 @@ protocol FeedListWireframeInterface: WireframeInterface {
 protocol FeedListViewInterface: ViewInterface {
     func reloadData()
     func showLoading(_ loading: Bool)
-    func showError(message: String, target: Any, action:Selector)
+    func showError(error: ErrorInterface, target: Any, action:Selector)
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {

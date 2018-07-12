@@ -27,9 +27,9 @@ extension VBaseViewController {
         }
     }
     
-    func showErrorView(message: String, target: Any, action:Selector) {
+    func showErrorView(error: ErrorInterface, target: Any, action: Selector) {
         verifyFenceView()
-        fenceView.showErrorView(message: message, target: target, action: action)
+        fenceView.showErrorView(error: error, target: target, action: action)
         view.bringSubview(toFront: fenceView)
         fenceView.isHidden = false
     }
