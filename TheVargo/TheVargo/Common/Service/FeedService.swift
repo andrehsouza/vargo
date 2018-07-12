@@ -9,16 +9,14 @@
 import Foundation
 import Alamofire
 
-typealias FeedCompletionBlock = (RequestResultType<Feed>) -> (Void)
-
-class FeedService: NSObject {
+class FeedService: NSObject, ServiceProtocol {
     
-    private let url: String = ""
+    typealias Entity = Feed
     
-    func getFeed(completion: @escaping FeedCompletionBlock) {
+    func get(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void) {
+        let url = VUrl.path(for: .feed(page: page))
         let service = APIService(with: url)
         service.getData(completion)
     }
-
     
 }

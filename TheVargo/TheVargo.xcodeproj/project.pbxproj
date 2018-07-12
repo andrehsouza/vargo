@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		304F553E20F5979900111E6D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553D20F5979900111E6D /* Video.swift */; };
 		304F554020F597E700111E6D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553F20F597E700111E6D /* Feed.swift */; };
+		307F367720F6E1280071DCB8 /* VUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F367620F6E1280071DCB8 /* VUrl.swift */; };
 		30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79220F4516200B9A3BB /* VNavigationController.swift */; };
 		30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */; };
 		7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2820F69C06001E848B /* ErrorResponse.swift */; };
@@ -76,6 +77,7 @@
 		27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVargo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo.debug.xcconfig"; sourceTree = "<group>"; };
 		304F553D20F5979900111E6D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		304F553F20F597E700111E6D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		307F367620F6E1280071DCB8 /* VUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUrl.swift; sourceTree = "<group>"; };
 		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
 		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheVargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		307F367520F6E0F50071DCB8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				307F367620F6E1280071DCB8 /* VUrl.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		30D2C79620F4519F00B9A3BB /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,8 +313,6 @@
 		7BD9101C20EFB312003E2DCE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				30D2C79620F4519F00B9A3BB /* VIPER */,
-				7BD9102020EFB521003E2DCE /* Base */,
 				7BD9102920EFB6D8003E2DCE /* Feed */,
 			);
 			path = Modules;
@@ -332,6 +340,9 @@
 		7BD9102C20EFB99E003E2DCE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				30D2C79620F4519F00B9A3BB /* VIPER */,
+				7BD9102020EFB521003E2DCE /* Base */,
+				307F367520F6E0F50071DCB8 /* Util */,
 				7B62BA2720F69B8C001E848B /* Service */,
 				7B62BA3620F6B662001E848B /* Model */,
 				7B64586A20F3C82E0016557C /* Entities */,
@@ -582,6 +593,7 @@
 				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,
 				7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */,
 				7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */,
+				307F367720F6E1280071DCB8 /* VUrl.swift in Sources */,
 				304F553E20F5979900111E6D /* Video.swift in Sources */,
 				7B6458AE20F3F7C60016557C /* VSplitViewController.swift in Sources */,
 				7B64585E20F3AA1F0016557C /* FeedListInteractor.swift in Sources */,

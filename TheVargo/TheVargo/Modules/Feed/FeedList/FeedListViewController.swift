@@ -23,7 +23,18 @@ final class FeedListViewController: VBaseViewController {
     }
 
     @IBAction func touchButton(_ sender: Any) {
-        presenter.didPressButton()
+//        presenter.didPressButton()
+        let feedService = FeedService()
+        feedService.get(page: 1, completion: { result in
+            switch result {
+            case .success(let feed):
+                debugPrint("SUCESSO!!!!!")
+                break
+            case .failure(let errorResponse):
+                debugPrint("ERRO!!!!! \(errorResponse)")
+                break
+            }
+        })
     }
     
     

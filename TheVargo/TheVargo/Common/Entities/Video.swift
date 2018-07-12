@@ -13,6 +13,6 @@ struct Video: Decodable {
     var title: String?
     var thumbnail: String?
     var videoUrl: String
-    var relatedVideos: String?
+    var relatedVideos: Int?
     
 }

@@ -9,7 +9,12 @@
 import Foundation
 import Alamofire
 
-class APIService: NSObject {
+protocol ServiceProtocol {
+    associatedtype Entity where Entity: Decodable
+    func get(page: Int, completion: @escaping (RequestResultType<Entity>) -> Void)
+}
+
+final class APIService: NSObject {
     
     private var url: String?
     
@@ -61,19 +66,23 @@ extension APIService {
 extension APIService {
     
     func printRequest(url: String, method: String){
-        debugPrint("----------------------- REQUEST ------------------------------\n\n")
+        debugPrint("----------------------- REQUEST ------------------------------")
+        debugPrint("")
         debugPrint("\(method): \(url)")
-        debugPrint("\n\n---------------------------------------------------------------")
+        debugPrint("")
+        debugPrint("---------------------------------------------------------------")
     }
     
     func printResponse(response:DataResponse<Any>){
-        debugPrint("----------------------- RESPONSE ------------------------------\n\n")
+        debugPrint("----------------------- RESPONSE ------------------------------")
+        debugPrint("")
         debugPrint("Request for \(response.response?.url?.absoluteString ?? "-sem url-") completed with status code \(response.response?.statusCode ?? 0)")
         debugPrint("data:")
         if let json = response.result.value as? [String : Any] {
             print(json)
         }
-        debugPrint("\n\n---------------------------------------------------------------")
+        debugPrint("")
+        debugPrint("---------------------------------------------------------------")
     }
     
 }

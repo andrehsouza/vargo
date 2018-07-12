@@ -14,14 +14,15 @@ enum FeedContent: Decodable {
 }
 
 extension FeedContent {
+    
     enum CodingKeys: String, CodingKey {
         case article, video
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        if let swifter = try container.decodeIfPresent(Article.self, forKey: .article) {
-            self = .article(swifter)
+        if let article = try container.decodeIfPresent(Article.self, forKey: .article) {
+            self = .article(article)
         } else {
             self = .video(try container.decode(Video.self, forKey: .video))
         }
@@ -29,6 +30,7 @@ extension FeedContent {
 }
 
 struct Feed: Decodable {
+    
     var page: Int
     var totalPages: Int
     var items: [FeedContent]
