@@ -14,16 +14,16 @@ final class FeedDetailWireframe: BaseWireframe {
 
     // MARK: - Private properties -
 
-    private let _storyboard = UIStoryboard(type: .feed)
+    private let _storyboard = UIStoryboard(type: .detail)
 
     // MARK: - Module setup -
     
-    init() {
+    init(feedContent: FeedContent? = nil) {
         let moduleViewController = _storyboard.instantiateViewController(ofType: FeedDetailViewController.self)
         super.init(viewController: moduleViewController)
         
         let interactor = FeedDetailInteractor()
-        let presenter = FeedDetailPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
+        let presenter = FeedDetailPresenter(wireframe: self, view: moduleViewController, interactor: interactor, feedContent: feedContent)
         moduleViewController.presenter = presenter
     }
 

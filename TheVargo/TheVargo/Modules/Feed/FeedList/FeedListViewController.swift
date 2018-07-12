@@ -15,6 +15,12 @@ final class FeedListViewController: VBaseViewController {
     // MARK: - Public properties -
 
     var presenter: FeedListPresenterInterface!
+    
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            setupTableView()
+        }
+    }
 
     // MARK: - Lifecycle -
 
@@ -22,21 +28,64 @@ final class FeedListViewController: VBaseViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func touchButton(_ sender: Any) {
-//        presenter.didPressButton()
-        let feedService = FeedService()
-        feedService.get(page: 1, completion: { result in
-            switch result {
-            case .success(let feed):
-                debugPrint("SUCESSO!!!!!")
-                break
-            case .failure(let errorResponse):
-                debugPrint("ERRO!!!!! \(errorResponse)")
-                break
-            }
-        })
+//    @IBAction func touchButton(_ sender: Any) {
+////        presenter.didPressButton()
+//        let feedService = FeedService()
+//        feedService.get(page: 1, completion: { result in
+//            switch result {
+//            case .success(let feed):
+//                debugPrint("SUCESSO!!!!!")
+//                break
+//            case .failure(let errorResponse):
+//                debugPrint("ERRO!!!!! \(errorResponse)")
+//                break
+//            }
+//        })
+//    }
+    
+    
+}
+
+// MARK: - Functions -
+
+extension FeedListViewController {
+    
+    private func setupTableView() {
+        tableView.register(FeedArticleTableViewCell.self)
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
+}
+
+// MARK: - UITableViewDataSource -
+
+extension FeedListViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return presenter.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.numberOrItems(in: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedArticleTableViewCell
+        cell.item = presenter.item(at: indexPath)
+        return cell
+    }
+    
+}
+
+// MARK: - UITableViewDelegate -
+
+extension FeedListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter.didSelectItem(at: indexPath)
+    }
     
 }
 
@@ -44,8 +93,8 @@ final class FeedListViewController: VBaseViewController {
 
 extension FeedListViewController: FeedListViewInterface {
     
-    func showArticles(_ articles: [Article]) {
-        //TODO
+    func reloadData() {
+        tableView.reloadData()
     }
     
     func showLoading(_ loading: Bool) {

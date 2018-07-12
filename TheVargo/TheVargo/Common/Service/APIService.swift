@@ -11,7 +11,7 @@ import Alamofire
 
 protocol ServiceProtocol {
     associatedtype Entity where Entity: Decodable
-    func get(page: Int, completion: @escaping (RequestResultType<Entity>) -> Void)
+    func get(_ page: Int, _ completion: @escaping (RequestResultType<Entity>) -> Void)
 }
 
 final class APIService: NSObject {

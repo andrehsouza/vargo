@@ -17,6 +17,12 @@ final class FeedListPresenter {
     private unowned let _view: FeedListViewInterface
     private let _interactor: FeedListInteractorInterface
     private let _wireframe: FeedListWireframeInterface
+    
+    private var feed: Feed = Feed() {
+        didSet {
+            _view.reloadData()
+        }
+    }
 
     // MARK: - Lifecycle -
 
@@ -33,8 +39,25 @@ final class FeedListPresenter {
 
 extension FeedListPresenter: FeedListPresenterInterface {
     
-    func didPressButton() {
-        _wireframe.navigate(to: .detail)
+    func numberOfSections() -> Int {
+        return 1
     }
+    
+    func numberOrItems(in section: Int) -> Int {
+        return feed.items?.count ?? 0
+    }
+    
+    func item(at indexPath: IndexPath) -> FeedItemInterface? {
+        return feed.items?[indexPath.row]
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        if let item = feed.items?[indexPath.row] {
+            _wireframe.navigate(to: .detail(item))
+        }
+    }
+    
+    
+    
     
 }

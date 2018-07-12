@@ -13,7 +13,7 @@ class FeedService: NSObject, ServiceProtocol {
     
     typealias Entity = Feed
     
-    func get(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void) {
+    func get(_ page: Int, _ completion: @escaping (RequestResultType<Feed>) -> Void) {
         let url = VUrl.path(for: .feed(page: page))
         let service = APIService(with: url)
         service.getData(completion)

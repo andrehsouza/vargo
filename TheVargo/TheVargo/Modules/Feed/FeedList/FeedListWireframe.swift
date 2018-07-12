@@ -34,6 +34,13 @@ final class FeedListWireframe: BaseWireframe {
 extension FeedListWireframe: FeedListWireframeInterface {
 
     func navigate(to option: FeedListNavigationOption) {
-        show(option.wireframe, with: .push, animated: true)
+        switch option {
+        case .detail(let feedContent):
+            _openFeedDetail(with: feedContent)
+        }
+    }
+    
+    private func _openFeedDetail(with feedContent: FeedContent) {
+        navigationController?.pushWireframe(FeedDetailWireframe(feedContent: feedContent))
     }
 }

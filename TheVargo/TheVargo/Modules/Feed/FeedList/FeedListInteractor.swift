@@ -11,9 +11,17 @@
 import Foundation
 
 final class FeedListInteractor {
+    
+    fileprivate let feedService = FeedService()
+    
 }
 
 // MARK: - Extensions -
 
 extension FeedListInteractor: FeedListInteractorInterface {
+    
+    func getFeeds(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void) {
+        feedService.get(page, completion)
+    }
+    
 }

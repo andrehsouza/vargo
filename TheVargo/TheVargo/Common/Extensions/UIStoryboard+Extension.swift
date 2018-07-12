@@ -12,7 +12,8 @@ import UIKit
 
 enum StoryboardType: String {
     
-    case feed = "Feed"
+    case feed   = "FeedList"
+    case detail = "FeedDetail"
     
     var name: String {
         return rawValue

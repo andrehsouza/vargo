@@ -17,15 +17,19 @@ final class FeedDetailPresenter {
     private unowned let _view: FeedDetailViewInterface
     private let _interactor: FeedDetailInteractorInterface
     private let _wireframe: FeedDetailWireframeInterface
+    
+    private let _feedContent: FeedContent?
 
     // MARK: - Lifecycle -
 
     init(wireframe: FeedDetailWireframeInterface,
          view: FeedDetailViewInterface,
-         interactor: FeedDetailInteractorInterface) {
+         interactor: FeedDetailInteractorInterface,
+         feedContent: FeedContent?) {
         _wireframe = wireframe
         _view = view
         _interactor = interactor
+        _feedContent = feedContent
     }
 }
 

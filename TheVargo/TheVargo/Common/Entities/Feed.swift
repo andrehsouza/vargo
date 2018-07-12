@@ -8,32 +8,11 @@
 
 import Foundation
 
-enum FeedContent: Decodable {
-    case article(Article)
-    case video(Video)
-}
-
-extension FeedContent {
-    
-    enum CodingKeys: String, CodingKey {
-        case article, video
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        if let article = try container.decodeIfPresent(Article.self, forKey: .article) {
-            self = .article(article)
-        } else {
-            self = .video(try container.decode(Video.self, forKey: .video))
-        }
-    }
-}
-
 struct Feed: Decodable {
     
-    var page: Int
-    var totalPages: Int
-    var items: [FeedContent]
+    var page: Int?
+    var totalPages: Int?
+    var items: [FeedContent]?
     
     enum CodingKeys: String, CodingKey {
         case page
@@ -41,11 +20,15 @@ struct Feed: Decodable {
         case items
     }
     
+    init() {
+        
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.page = try container.decode(Int.self, forKey: .page)
-        self.totalPages = try container.decode(Int.self, forKey: .totalPages)
-        self.items = try container.decode([FeedContent].self, forKey: .items)
+        self.page = try? container.decode(Int.self, forKey: .page)
+        self.totalPages = try? container.decode(Int.self, forKey: .totalPages)
+        self.items = try? container.decode([FeedContent].self, forKey: .items)
     }
     
 }

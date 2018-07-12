@@ -11,14 +11,7 @@
 import UIKit
 
 enum FeedListNavigationOption {
-    case detail
-    
-    var wireframe: BaseWireframe {
-        switch self {
-        case .detail:
-            return FeedDetailWireframe()
-        }
-    }
+    case detail(FeedContent)
 }
 
 protocol FeedListWireframeInterface: WireframeInterface {
@@ -26,14 +19,25 @@ protocol FeedListWireframeInterface: WireframeInterface {
 }
 
 protocol FeedListViewInterface: ViewInterface {
-    func showArticles(_ articles: [Article])
+    func reloadData()
     func showLoading(_ loading: Bool)
     func showError(message: String, target: Any, action:Selector)
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {
-    func didPressButton()
+    func numberOfSections() -> Int
+    func numberOrItems(in section: Int) -> Int
+    func item(at indexPath: IndexPath) -> FeedItemInterface?
+    func didSelectItem(at indexPath: IndexPath)
 }
 
 protocol FeedListInteractorInterface: InteractorInterface {
+    func getFeeds(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void)
+}
+
+protocol FeedItemInterface {
+    var title: String? { get }
+    var description: String? { get }
+    var imageURL: String? { get }
+    var isMarked: Bool { get }
 }

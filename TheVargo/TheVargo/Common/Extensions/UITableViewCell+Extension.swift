@@ -1,8 +1,8 @@
 //
-//  UICollectionViewCell+Extension.swift
+//  UITableViewCell+Extension.swift
 //  TheVargo
 //
-//  Created by Andre Souza on 09/07/2018.
+//  Created by Andre Souza on 12/07/2018.
 //  Copyright © 2018 AndreSamples. All rights reserved.
 //
 
@@ -26,4 +26,4 @@ extension NibLoadableView where Self: UIView {
     }
 }
 
-extension UICollectionViewCell: ReusableView, NibLoadableView { }
+extension UITableViewCell: ReusableView, NibLoadableView { }
