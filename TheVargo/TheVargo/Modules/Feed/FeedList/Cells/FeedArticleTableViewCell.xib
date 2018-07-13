@@ -129,6 +129,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cellBookMarkButton" destination="kxy-B1-cpF" id="GtV-1q-irM"/>
+                <outlet property="cellCardView" destination="hkO-TR-yBK" id="2L0-uT-7Il"/>
                 <outlet property="cellDescriptionLabel" destination="4XZ-Aj-ed0" id="PoT-jR-yoJ"/>
                 <outlet property="cellImageView" destination="Th6-7p-Dhh" id="XLl-UK-1YS"/>
                 <outlet property="cellImageViewPlayer" destination="5Ai-fb-iYL" id="KR8-C3-wbX"/>

@@ -16,6 +16,7 @@ class FeedArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var cellBookMarkButton: UIButton!
     @IBOutlet weak var cellTitleLabel: UILabel!
     @IBOutlet weak var cellDescriptionLabel: UILabel!
+    @IBOutlet weak var cellCardView: VCardView!
     
     var feedListItemInteraction: FeedListItemInteraction?
     
@@ -50,13 +51,15 @@ class FeedArticleTableViewCell: UITableViewCell {
     func setupLayout() {
         contentView.layer.masksToBounds = true
         contentView.backgroundColor = .clear
-        backgroundColor = .white
+        backgroundColor = .clear
+        
         layer.masksToBounds = false
         layer.shadowColor = UIColor.groupTableViewBackground.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 1)
-        layer.shadowRadius = 6
         layer.shadowOpacity = 0.5
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
+        layer.shadowOffset = CGSize(width: 8, height: -7)
+        layer.shadowRadius = 6
+        
+        layer.shadowPath = UIBezierPath(roundedRect: cellCardView.bounds, cornerRadius: cellCardView.cornerRadius).cgPath
     }
     
 }
