@@ -22,6 +22,7 @@ protocol FeedListViewInterface: ViewInterface {
     func reloadData()
     func showError(error: ErrorInterface, target: Any, action:Selector)
     func showFooterLoading(_ loading: Bool)
+    func showLoading(_ loading: Bool)
     func showFooterUpdatedMessage(message: String)
 }
 

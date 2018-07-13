@@ -89,7 +89,7 @@ extension FeedListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastElement = presenter.numberOrItems(in: indexPath.section) - 1
-        if tableViewFooter.isHidden && indexPath.row == lastElement {
+        if !tableViewFooter.isHidden && indexPath.row == lastElement {
             presenter._loadMoreItems()
         }
     }
@@ -100,13 +100,20 @@ extension FeedListViewController: UITableViewDelegate {
 
 extension FeedListViewController: FeedListViewInterface {
     
+    func showLoading(_ loading: Bool) {
+        if loading {
+            showFenceLoading()
+        } else {
+            hideFenceView()
+        }
+    }
+    
     func showFooterUpdatedMessage(message: String) {
         footerLabel.text = message
         footerActivity.isHidden = true
     }
     
     func showFooterLoading(_ loading: Bool) {
-        hideFenceView()
         tableViewFooter.isHidden = !loading
     }
     

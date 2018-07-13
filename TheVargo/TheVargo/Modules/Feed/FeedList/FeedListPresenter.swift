@@ -41,11 +41,10 @@ extension FeedListPresenter: FeedListPresenterInterface {
     }
     
     func viewDidLoad() {
-        _loadMoreItems()
+        _loadItems()
     }
     
     func _loadMoreItems() {
-        _view.showFooterLoading(true)
         if _feed.page < _feed.totalPages {
             if !_isLoading {
                 _isLoading = true
@@ -81,6 +80,8 @@ extension FeedListPresenter: FeedListPresenterInterface {
 extension FeedListPresenter {
     
     @objc private func _loadItems() {
+        _view.showFooterLoading(false)
+        _view.showLoading(true)
         _loadMoreItems()
     }
     
@@ -89,11 +90,11 @@ extension FeedListPresenter {
         switch result {
         case .success(let feed):
             incrementFeed(feed)
+            _view.showLoading(false)
+            _view.showFooterLoading(true)
             _view.reloadData()
-            _view.showFooterLoading(false)
             break
         case .failure(let errorResponse):
-            _view.showFooterLoading(false)
             _view.showError(error: errorResponse, target: self, action: #selector(self._loadItems))
             break
         }
