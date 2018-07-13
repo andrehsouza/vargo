@@ -17,12 +17,9 @@ final class FeedListPresenter {
     private unowned let _view: FeedListViewInterface
     private let _interactor: FeedListInteractorInterface
     private let _wireframe: FeedListWireframeInterface
-    
-    private var _feed: Feed = Feed() {
-        didSet {
-            _view.reloadData()
-        }
-    }
+
+    private var _isLoading: Bool = false
+    private var _feed: Feed = Feed()
 
     // MARK: - Lifecycle -
 
@@ -40,10 +37,21 @@ final class FeedListPresenter {
 extension FeedListPresenter: FeedListPresenterInterface {
     
     func viewDidLoad() {
-        _view.showLoading(true)
-        _interactor.getFeeds(page: 1, completion: { [weak self] result in
-            self?._handleFeedResult(result)
-        })
+        _loadMoreItems()
+    }
+    
+    func _loadMoreItems() {
+        _view.showFooterLoading(true)
+        if _feed.page < _feed.totalPages {
+            if !_isLoading {
+                _isLoading = true
+                _interactor.getFeeds(page: (_feed.page+1), completion: { [weak self] result in
+                    self?._handleFeedResult(result)
+                })
+            }
+        } else {
+            _view.showFooterUpdatedMessage(message: "You're up to date! 🎉")
+        }
     }
     
     func numberOfSections() -> Int {
@@ -51,17 +59,15 @@ extension FeedListPresenter: FeedListPresenterInterface {
     }
     
     func numberOrItems(in section: Int) -> Int {
-        return _feed.items?.count ?? 0
+        return _feed.items.count
     }
     
     func item(at indexPath: IndexPath) -> FeedItemInterface? {
-        return _feed.items?[indexPath.row]
+        return _feed.items[indexPath.row]
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        if let item = _feed.items?[indexPath.row] {
-            _wireframe.navigate(to: .detail(item))
-        }
+        _wireframe.navigate(to: .detail(_feed.items[indexPath.row]))
     }
     
 }
@@ -70,16 +76,30 @@ extension FeedListPresenter: FeedListPresenterInterface {
 
 extension FeedListPresenter {
     
+    @objc private func _loadItems() {
+        _loadMoreItems()
+    }
+    
     private func _handleFeedResult(_ result: RequestResultType<Feed>) {
+        _isLoading = false
         switch result {
         case .success(let feed):
-            _feed = feed
-            _view.showLoading(false)
+            incrementFeed(feed)
+            _view.reloadData()
+            _view.showFooterLoading(false)
             break
         case .failure(let errorResponse):
-//            _view.showError(error: errorResponse, target: self, action: <#T##Selector#>)
+            _view.showFooterLoading(false)
+            _view.showError(error: errorResponse, target: self, action: #selector(self._loadItems))
             break
         }
+    }
+    
+    //Necessary to simulate pagination
+    private func incrementFeed(_ feed: Feed) {
+        _feed.page = feed.page
+        _feed.totalPages = feed.totalPages
+        _feed.items.append(contentsOf: feed.items)
     }
     
 }

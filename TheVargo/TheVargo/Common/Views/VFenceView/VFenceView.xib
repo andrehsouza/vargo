@@ -56,11 +56,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGQ-m6-bQL" customClass="VButton" customModule="TheVargo" customModuleProvider="target">
-                            <rect key="frame" x="87" y="313.5" width="200" height="60"/>
+                            <rect key="frame" x="62" y="358.5" width="250" height="70"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="IH6-nO-gCT"/>
-                                <constraint firstAttribute="height" constant="60" id="a6h-QN-8Hh"/>
+                                <constraint firstAttribute="width" constant="250" id="IH6-nO-gCT"/>
+                                <constraint firstAttribute="height" constant="70" id="a6h-QN-8Hh"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Tentar novamente">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -77,19 +78,24 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocorreu um erro, tente novamente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-AG-Efp">
-                            <rect key="frame" x="40" y="252" width="295" height="21.5"/>
+                            <rect key="frame" x="40" y="297" width="295" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_alert" translatesAutoresizingMaskIntoConstraints="NO" id="QF7-Sd-WsQ">
+                            <rect key="frame" x="155" y="208" width="64" height="64"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="Nxt-AG-Efp" firstAttribute="top" secondItem="QF7-Sd-WsQ" secondAttribute="bottom" constant="25" id="OHG-a2-U6n"/>
                         <constraint firstItem="JL2-bR-fbs" firstAttribute="trailing" secondItem="Nxt-AG-Efp" secondAttribute="trailing" constant="40" id="OSR-lN-P6R"/>
-                        <constraint firstItem="kGQ-m6-bQL" firstAttribute="centerY" secondItem="JL2-bR-fbs" secondAttribute="centerY" id="OoE-6U-gyO"/>
+                        <constraint firstItem="kGQ-m6-bQL" firstAttribute="centerY" secondItem="JL2-bR-fbs" secondAttribute="centerY" constant="50" id="OoE-6U-gyO"/>
                         <constraint firstItem="Nxt-AG-Efp" firstAttribute="leading" secondItem="JL2-bR-fbs" secondAttribute="leading" constant="40" id="RII-Gi-246"/>
                         <constraint firstItem="kGQ-m6-bQL" firstAttribute="centerX" secondItem="JL2-bR-fbs" secondAttribute="centerX" id="jaV-26-SSq"/>
                         <constraint firstItem="kGQ-m6-bQL" firstAttribute="top" secondItem="Nxt-AG-Efp" secondAttribute="bottom" constant="40" id="oEx-zc-3eI"/>
+                        <constraint firstItem="QF7-Sd-WsQ" firstAttribute="centerX" secondItem="JL2-bR-fbs" secondAttribute="centerX" id="xYz-xe-ICZ"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="JL2-bR-fbs"/>
                 </view>
@@ -114,4 +120,7 @@
             <point key="canvasLocation" x="34.5" y="90.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_alert" width="64" height="64"/>
+    </resources>
 </document>

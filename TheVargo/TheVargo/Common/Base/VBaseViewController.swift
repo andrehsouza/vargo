@@ -27,24 +27,23 @@ extension VBaseViewController {
         }
     }
     
-    func showErrorView(error: ErrorInterface, target: Any, action: Selector) {
+    func showFenceError(error: ErrorInterface, target: Any, action: Selector) {
         verifyFenceView()
         fenceView.showErrorView(error: error, target: target, action: action)
         view.bringSubview(toFront: fenceView)
         fenceView.isHidden = false
     }
     
-    func showLoadingView(_ loading: Bool) {
-        if loading {
-            verifyFenceView()
-            fenceView.showFenceLoadingView()
-            view.bringSubview(toFront: fenceView)
-            fenceView.isHidden = false
-        } else {
-            view.sendSubview(toBack: fenceView)
-            fenceView.isHidden = true
-        }
-        
+    func showFenceLoading() {
+        verifyFenceView()
+        fenceView.showFenceLoadingView()
+        view.bringSubview(toFront: fenceView)
+        fenceView.isHidden = false
+    }
+    
+    func hideFenceView() {
+        view.sendSubview(toBack: fenceView)
+        fenceView.isHidden = true
     }
 
 }

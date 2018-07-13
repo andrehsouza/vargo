@@ -20,11 +20,13 @@ protocol FeedListWireframeInterface: WireframeInterface {
 
 protocol FeedListViewInterface: ViewInterface {
     func reloadData()
-    func showLoading(_ loading: Bool)
     func showError(error: ErrorInterface, target: Any, action:Selector)
+    func showFooterLoading(_ loading: Bool)
+    func showFooterUpdatedMessage(message: String)
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {
+    func _loadMoreItems()
     func numberOfSections() -> Int
     func numberOrItems(in section: Int) -> Int
     func item(at indexPath: IndexPath) -> FeedItemInterface?
