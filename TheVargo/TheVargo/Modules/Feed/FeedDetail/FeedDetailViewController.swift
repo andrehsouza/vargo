@@ -9,8 +9,25 @@
 //
 
 import UIKit
+import AlamofireImage
 
 final class FeedDetailViewController: UIViewController {
+    
+    @IBOutlet weak var feedItemBookmarkButton: UIButton!
+    
+    @IBOutlet weak var feedItemImageView: VImageView!
+    @IBOutlet weak var feedItemPlayerImageView: UIButton!
+    
+    @IBOutlet weak var feedItemDateLabel: UILabel!
+    
+    @IBOutlet weak var feedItemTitleLabel: UILabel!
+    @IBOutlet weak var feedItemDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var feedItemAuthorsTitleLabel: UILabel!
+    @IBOutlet weak var feedItemAuthorsLabel: UILabel!
+    
+    @IBOutlet weak var feedItemFontTitleLabel: UILabel!
+    @IBOutlet weak var feedItemUrlButton: UIButton!
 
     // MARK: - Public properties -
 
@@ -20,10 +37,71 @@ final class FeedDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
+    
+    @IBAction func touchPlay(_ sender: Any) {
+        presenter.didPressPlay()
+    }
+    
+    @IBAction func touchBookmark(_ sender: Any) {
+        presenter.didPressBookmark()
+    }
+    
+    @IBAction func touchShare(_ sender: Any) {
+        presenter.didPressShare()
+    }
+    
+    @IBAction func touchURL(_ sender: Any) {
+        presenter.didPressUrl()
+    }
+    
 }
 
 // MARK: - Extensions -
 
 extension FeedDetailViewController: FeedDetailViewInterface {
+    
+    func open(_ activityViewController: UIActivityViewController) {
+        present(activityViewController, animated: true)
+    }
+    
+    func setBookmarked() {
+        feedItemBookmarkButton.isSelected = !feedItemBookmarkButton.isSelected
+    }
+    
+    func showfeedContent(_ item: FeedItemDetailInterface) {
+        
+        title = item.screenTitle
+        
+        feedItemBookmarkButton.isSelected = item.isMarked
+        feedItemPlayerImageView.isHidden = !item.isVideo
+        
+        feedItemDateLabel.text = item.date
+        
+        if let urlString = item.imageURL, let url = URL(string: urlString) {
+            feedItemImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
+        } else {
+            feedItemImageView.image = #imageLiteral(resourceName: "ic_place_holder")
+        }
+        
+        feedItemTitleLabel.text = item.title
+        feedItemDescriptionLabel.text = item.description
+        
+        feedItemAuthorsTitleLabel.text = item.authorTitle
+        feedItemAuthorsLabel.text = item.author
+        
+        feedItemFontTitleLabel.text = item.urlTitle
+        
+        if let urlDescription = item.urlDescription {
+            let attText = NSMutableAttributedString(string: urlDescription, attributes: [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+            feedItemUrlButton.setAttributedTitle(attText, for: .normal)
+        } else {
+            feedItemUrlButton.isHidden = true
+        }
+        
+        
+    }
+    
+    
 }

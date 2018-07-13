@@ -29,7 +29,7 @@ protocol FeedListPresenterInterface: PresenterInterface {
     func _loadMoreItems()
     func numberOfSections() -> Int
     func numberOrItems(in section: Int) -> Int
-    func item(at indexPath: IndexPath) -> FeedItemInterface?
+    func item(at indexPath: IndexPath) -> FeedListItemInterface?
     func didSelectItem(at indexPath: IndexPath)
     func didBookMarkItem(at indexPath: IndexPath)
 }
@@ -38,7 +38,7 @@ protocol FeedListInteractorInterface: InteractorInterface {
     func getFeeds(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void)
 }
 
-protocol FeedItemInterface {
+protocol FeedListItemInterface {
     var title: String? { get }
     var description: String? { get }
     var imageURL: String? { get }

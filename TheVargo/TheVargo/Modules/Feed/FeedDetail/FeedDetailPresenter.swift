@@ -36,4 +36,35 @@ final class FeedDetailPresenter {
 // MARK: - Extensions -
 
 extension FeedDetailPresenter: FeedDetailPresenterInterface {
+    
+    func viewDidLoad() {
+        if let feedContent = _feedContent {
+            _view.showfeedContent(feedContent)
+        }
+    }
+    
+    func didPressPlay() {
+        //TODO play video
+    }
+    
+    func didPressShare() {
+        var shareItems: [Any] = [_feedContent?.title ?? ""]
+        if let urlString = _feedContent?.url, let urlToOpen = URL(string: urlString) {
+            shareItems.append(urlToOpen)
+        }
+        let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: [])
+        _view.open(activityViewController)
+    }
+    
+    func didPressBookmark() {
+        _view.setBookmarked()
+    }
+    
+    func didPressUrl() {
+        guard let urlString = _feedContent?.url, let urlToOpen = URL(string: urlString) else { return }
+        if UIApplication.shared.canOpenURL(urlToOpen) {
+            UIApplication.shared.open(urlToOpen, options: [:], completionHandler: nil)
+        }
+    }
+    
 }

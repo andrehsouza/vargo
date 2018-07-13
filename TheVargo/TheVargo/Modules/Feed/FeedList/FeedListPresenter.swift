@@ -66,7 +66,7 @@ extension FeedListPresenter: FeedListPresenterInterface {
         return _feed.items.count
     }
     
-    func item(at indexPath: IndexPath) -> FeedItemInterface? {
+    func item(at indexPath: IndexPath) -> FeedListItemInterface? {
         return _feed.items[indexPath.row]
     }
     

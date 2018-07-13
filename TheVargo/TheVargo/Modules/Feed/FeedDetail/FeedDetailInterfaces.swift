@@ -18,10 +18,28 @@ protocol FeedDetailWireframeInterface: WireframeInterface {
 }
 
 protocol FeedDetailViewInterface: ViewInterface {
+    func open(_ activityViewController: UIActivityViewController)
+    func setBookmarked()
+    func showfeedContent(_ item: FeedItemDetailInterface)
 }
 
 protocol FeedDetailPresenterInterface: PresenterInterface {
+    func didPressPlay()
+    func didPressShare()
+    func didPressBookmark()
+    func didPressUrl()
 }
 
 protocol FeedDetailInteractorInterface: InteractorInterface {
+    
+}
+
+protocol FeedItemDetailInterface: FeedListItemInterface {
+    var screenTitle: String { get }
+    var authorTitle: String? { get }
+    var author: String? { get }
+    var urlTitle: String? { get }
+    var urlDescription: String? { get }
+    var url: String? { get }
+    var date: String? { get }
 }

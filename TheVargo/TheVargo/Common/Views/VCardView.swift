@@ -71,7 +71,7 @@ extension VCardView: BaseViewProtocol {
         if radiusOnlyBottom {
            layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         }
-        layer.masksToBounds = true
+//        layer.masksToBounds = true
         layer.borderColor = borderColor?.cgColor
         layer.borderWidth = borderWidth
         layer.backgroundColor = layerBackgroundColor?.cgColor

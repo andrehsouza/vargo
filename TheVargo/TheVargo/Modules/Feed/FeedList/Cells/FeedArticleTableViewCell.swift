@@ -19,7 +19,7 @@ class FeedArticleTableViewCell: UITableViewCell {
     
     var feedListItemInteraction: FeedListItemInteraction?
     
-    var item: FeedItemInterface? {
+    var item: FeedListItemInterface? {
         didSet {
             if let urlString = item?.imageURL, let url = URL(string: urlString) {
                 cellImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
@@ -45,6 +45,18 @@ class FeedArticleTableViewCell: UITableViewCell {
     @IBAction func touchBookMark(_ sender: Any) {
         cellBookMarkButton.isSelected = !cellBookMarkButton.isSelected
         feedListItemInteraction?.didPressBookMark(self)
+    }
+    
+    func setupLayout() {
+        contentView.layer.masksToBounds = true
+        contentView.backgroundColor = .clear
+        backgroundColor = .white
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.groupTableViewBackground.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowRadius = 6
+        layer.shadowOpacity = 0.5
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
     }
     
 }

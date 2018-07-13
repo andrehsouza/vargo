@@ -68,6 +68,7 @@ extension FeedListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedArticleTableViewCell
         cell.feedListItemInteraction = self
         cell.item = presenter.item(at: indexPath)
+        cell.setupLayout()
         return cell
     }
     
