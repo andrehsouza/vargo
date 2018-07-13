@@ -17,6 +17,7 @@ class FeedArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var cellTitleLabel: UILabel!
     @IBOutlet weak var cellDescriptionLabel: UILabel!
     
+    var feedListItemInteraction: FeedListItemInteraction?
     
     var item: FeedItemInterface? {
         didSet {
@@ -35,13 +36,15 @@ class FeedArticleTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    @IBAction func touchBookMark(_ sender: Any) {
+        cellBookMarkButton.isSelected = !cellBookMarkButton.isSelected
+        feedListItemInteraction?.didPressBookMark(self)
     }
     
 }

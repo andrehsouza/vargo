@@ -14,7 +14,6 @@ final class FeedListViewController: VBaseViewController {
 
     // MARK: - Public properties -
 
-//    private var isLoading: Bool = false
     var presenter: FeedListPresenterInterface!
     
     @IBOutlet private weak var tableView: UITableView! {
@@ -67,6 +66,7 @@ extension FeedListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedArticleTableViewCell
+        cell.feedListItemInteraction = self
         cell.item = presenter.item(at: indexPath)
         return cell
     }
@@ -117,4 +117,16 @@ extension FeedListViewController: FeedListViewInterface {
         tableView.reloadData()
     }
     
+}
+
+//MARK: - FeedListItemInteraction -
+
+extension FeedListViewController: FeedListItemInteraction {
+    
+    func didPressBookMark(_ row: UITableViewCell) {
+        if let indexPath = tableView.indexPath(for: row) {
+            presenter.didBookMarkItem(at: indexPath)
+        }
+    }
+
 }

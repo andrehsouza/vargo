@@ -10,7 +10,7 @@ import UIKit
 
 class ThemeInitializer: Initializable {
     
-    lazy var titleFont = UIFont(name: "Optima-Bold", size: 40)!
+    lazy var titleFont = UIFont(name: "Optima-Bold", size: 30)!
     
     func performInitialization() {
         UINavigationBar.appearance().tintColor = .black

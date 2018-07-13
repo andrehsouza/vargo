@@ -36,6 +36,10 @@ final class FeedListPresenter {
 
 extension FeedListPresenter: FeedListPresenterInterface {
     
+    func didBookMarkItem(at indexPath: IndexPath) {
+        //TODO save book mark
+    }
+    
     func viewDidLoad() {
         _loadMoreItems()
     }

@@ -31,6 +31,7 @@ protocol FeedListPresenterInterface: PresenterInterface {
     func numberOrItems(in section: Int) -> Int
     func item(at indexPath: IndexPath) -> FeedItemInterface?
     func didSelectItem(at indexPath: IndexPath)
+    func didBookMarkItem(at indexPath: IndexPath)
 }
 
 protocol FeedListInteractorInterface: InteractorInterface {
@@ -43,4 +44,8 @@ protocol FeedItemInterface {
     var imageURL: String? { get }
     var isMarked: Bool { get }
     var isVideo: Bool { get }
+}
+
+protocol FeedListItemInteraction {
+    func didPressBookMark(_ row: UITableViewCell)
 }
