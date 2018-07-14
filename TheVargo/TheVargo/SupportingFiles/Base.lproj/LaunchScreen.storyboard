@@ -18,16 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KBP-gL-ZXe">
-                                <rect key="frame" x="137" y="120" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCV-fE-gFq">
+                                <rect key="frame" x="68" y="312.5" width="240" height="2"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="DOw-9U-tCi"/>
-                                    <constraint firstAttribute="width" constant="100" id="Q64-np-gLJ"/>
+                                    <constraint firstAttribute="height" constant="2" id="5cA-48-KjT"/>
+                                    <constraint firstAttribute="width" constant="240" id="IJI-zy-DZB"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vargo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu1-yU-mej">
-                                <rect key="frame" x="142.5" y="255" width="90" height="42"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Vargo  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu1-yU-mej">
+                                <rect key="frame" x="112.5" y="288.5" width="150.5" height="50"/>
+                                <color key="backgroundColor" red="0.74117647058823533" green="0.88627450980392153" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -37,15 +39,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos &amp; Articles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQl-ry-NMQ">
+                                <rect key="frame" x="122" y="353.5" width="131" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_vargo" translatesAutoresizingMaskIntoConstraints="NO" id="4Go-MR-Hvm">
+                                <rect key="frame" x="88" y="88.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Iy5-kO-oAs"/>
+                                    <constraint firstAttribute="height" constant="200" id="U27-7T-bpZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.7502714546" green="0.8846067071" blue="0.85192968179999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.74901960784313726" green="0.88627450980392153" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OyX-Ci-fFm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2hw-KC-IW9"/>
-                            <constraint firstItem="fu1-yU-mej" firstAttribute="top" secondItem="KBP-gL-ZXe" secondAttribute="bottom" constant="35" id="7hu-TH-llH"/>
-                            <constraint firstItem="KBP-gL-ZXe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nvt-yL-48m"/>
+                            <constraint firstItem="zCV-fE-gFq" firstAttribute="centerX" secondItem="fu1-yU-mej" secondAttribute="centerX" id="LIE-8m-epb"/>
                             <constraint firstItem="fu1-yU-mej" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TpT-Gd-JHJ"/>
-                            <constraint firstItem="KBP-gL-ZXe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ha5-Kh-TAK"/>
+                            <constraint firstItem="oQl-ry-NMQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Tqh-Ld-0u0"/>
+                            <constraint firstItem="oQl-ry-NMQ" firstAttribute="top" secondItem="fu1-yU-mej" secondAttribute="bottom" constant="15" id="Umb-Hr-dk6"/>
+                            <constraint firstItem="4Go-MR-Hvm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dp9-3M-aH7"/>
+                            <constraint firstItem="fu1-yU-mej" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-30" id="huV-pL-k7L"/>
+                            <constraint firstItem="zCV-fE-gFq" firstAttribute="centerY" secondItem="fu1-yU-mej" secondAttribute="centerY" id="i9k-y4-yXR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OyX-Ci-fFm" secondAttribute="bottom" constant="30" id="qQA-Rl-FTn"/>
+                            <constraint firstItem="fu1-yU-mej" firstAttribute="top" secondItem="4Go-MR-Hvm" secondAttribute="bottom" id="yMH-Gc-2GL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,6 +75,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_logo" width="64" height="64"/>
+        <image name="ic_logo_vargo" width="240" height="240"/>
     </resources>
 </document>
