@@ -11,9 +11,17 @@
 import Foundation
 
 final class FeedDetailInteractor {
+    
+    fileprivate let relatedVideoService = RelatedVideoService()
+    
 }
 
 // MARK: - Extensions -
 
 extension FeedDetailInteractor: FeedDetailInteractorInterface {
+    
+    func getRelated(page: Int, completion: @escaping (RequestResultType<[FeedContent]>) -> Void) {
+        relatedVideoService.get(page, completion)
+    }
+    
 }

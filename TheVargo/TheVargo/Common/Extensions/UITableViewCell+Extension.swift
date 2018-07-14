@@ -8,22 +8,4 @@
 
 import UIKit
 
-protocol ReusableView: class { }
-
-extension ReusableView where Self: UIView {
-    
-    static var reuseIdentifier: String {
-        return identifier
-    }
-}
-
-protocol NibLoadableView: class { }
-
-extension NibLoadableView where Self: UIView {
-    
-    static var nibName: String {
-        return identifier
-    }
-}
-
 extension UITableViewCell: ReusableView, NibLoadableView { }

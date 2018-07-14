@@ -148,4 +148,13 @@ extension FeedContent: FeedItemDetailInterface {
         
     }
     
+    var relatedVideos: Int? {
+        switch self {
+        case .article(_):
+            return nil
+        case .video(let video):
+            return video.relatedVideos
+        }
+    }
+    
 }

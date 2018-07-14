@@ -18,7 +18,8 @@ final class FeedDetailPresenter {
     private let _interactor: FeedDetailInteractorInterface
     private let _wireframe: FeedDetailWireframeInterface
     
-    private let _feedContent: FeedContent?
+    private var _feedContent: FeedContent?
+    private var _feedRelatedVideos: [FeedContent] = []
 
     // MARK: - Lifecycle -
 
@@ -40,7 +41,33 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
     func viewDidLoad() {
         if let feedContent = _feedContent {
             _view.showfeedContent(feedContent)
+            if feedContent.isVideo {
+                _view.showWaitingView(with: .loading)
+            } else {
+                _view.hideRelatedVideosContainer()
+            }
         }
+    }
+    
+    func viewDidAppear(animated: Bool) {
+        if let feedContent = _feedContent, feedContent.isVideo {
+            _view.showRelatedVideosContainerAnimating(true)
+        }
+    }
+    
+    func numberOfItems() -> Int {
+        return _feedRelatedVideos.count
+    }
+    
+    func item(at indexPath: IndexPath) -> FeedItemDetailInterface? {
+        return _feedRelatedVideos[indexPath.item]
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        _feedContent = _feedRelatedVideos[indexPath.item]
+        _view.showfeedContent(_feedRelatedVideos[indexPath.item])
+        clearRelatedVideos()
+        loadRelatedVideos()
     }
     
     func didPressPlay() {
@@ -64,6 +91,41 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
         guard let urlString = _feedContent?.url, let urlToOpen = URL(string: urlString) else { return }
         if UIApplication.shared.canOpenURL(urlToOpen) {
             UIApplication.shared.open(urlToOpen, options: [:], completionHandler: nil)
+        }
+    }
+    
+    func loadRelatedVideos() {
+        if let page = _feedContent?.relatedVideos {
+            _view.showWaitingView(with: .loading)
+            _interactor.getRelated(page:  page, completion: { [weak self] result in
+                self?._handleFeedResult(result)
+            })
+        }
+    }
+    
+}
+
+// MARK: - Extensions -
+
+extension FeedDetailPresenter {
+    
+    private func clearRelatedVideos() {
+        _feedRelatedVideos = []
+        _view.reloadData()
+    }
+    
+    private func _handleFeedResult(_ result: RequestResultType<[FeedContent]>) {
+        switch result {
+        case .success(let relatedVideos):
+            _feedRelatedVideos = relatedVideos
+            _view.showWaitingView(with: .success)
+            _view.reloadData()
+            _view.scrollCollectionToFirstItem()
+            break
+        case .failure(let errorResponse):
+            debugPrint("Error: \(errorResponse)")
+            _view.showWaitingView(with: .error)
+            break
         }
     }
     

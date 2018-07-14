@@ -11,6 +11,12 @@
 import UIKit
 import AlamofireImage
 
+enum FeedDetailLoadingType {
+    case loading
+    case error
+    case success
+}
+
 final class FeedDetailViewController: UIViewController {
     
     @IBOutlet weak var feedItemBookmarkButton: UIButton!
@@ -28,16 +34,31 @@ final class FeedDetailViewController: UIViewController {
     
     @IBOutlet weak var feedItemFontTitleLabel: UILabel!
     @IBOutlet weak var feedItemUrlButton: UIButton!
-
+    
+    @IBOutlet weak var feedRelatedVideosContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var feedRelatedVideosContainerBottom: NSLayoutConstraint!
+    @IBOutlet weak var feedRelatedVideosContainer: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var feedRelatedVideosLoadingLabel: UILabel!
+    @IBOutlet weak var feedRelatedVideosLoadingRetryButton: UIButton!
+    @IBOutlet weak var feedRelatedVideosLoadingActivityIndicator: UIActivityIndicatorView!
+    
+    
     // MARK: - Public properties -
-
+  
     var presenter: FeedDetailPresenterInterface!
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        initialSetup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.viewDidAppear(animated: animated)
     }
     
     @IBAction func touchPlay(_ sender: Any) {
@@ -56,11 +77,83 @@ final class FeedDetailViewController: UIViewController {
         presenter.didPressUrl()
     }
     
+    @IBAction func touchRetry(_ sender: Any) {
+        presenter.loadRelatedVideos()
+    }
+    
+}
+
+// MARK: - Functions -
+
+extension FeedDetailViewController {
+    
+    private func initialSetup() {
+        setupCollectionView()
+        presenter.viewDidLoad()
+    }
+    
+    private func setupCollectionView() {
+        collectionView.register(FeedRelatedVideoCollectionViewCell.self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+    
 }
 
 // MARK: - Extensions -
 
 extension FeedDetailViewController: FeedDetailViewInterface {
+    
+    func scrollCollectionToFirstItem() {
+        collectionView.contentOffset.x = 0
+    }
+    
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
+    func hideRelatedVideosContainer() {
+        feedRelatedVideosContainerBottom.constant = feedRelatedVideosContainerHeight.constant
+        feedRelatedVideosContainer.isHidden = true
+    }
+    
+    func showRelatedVideosContainerAnimating(_ animating: Bool) {
+        feedRelatedVideosContainer.isHidden = false
+        if animating {
+            UIView.animate(withDuration: 0.6,
+                           delay: 0.0, usingSpringWithDamping: 1.0,
+                           initialSpringVelocity: 1.0,
+                           options: [.curveEaseInOut], animations: {
+                            
+                self.feedRelatedVideosContainerBottom.constant = 0
+                self.view.layoutIfNeeded()
+                            
+            }, completion: { (Bool) -> Void in
+                self.presenter.loadRelatedVideos()
+            })
+        } else {
+            self.feedRelatedVideosContainerBottom.constant = 0
+        }
+    }
+    
+    func showWaitingView(with type: FeedDetailLoadingType) {
+        switch type {
+        case .loading:
+            feedRelatedVideosLoadingLabel.text = "Loading..."
+            feedRelatedVideosLoadingLabel.isHidden = false
+            feedRelatedVideosLoadingRetryButton.isHidden = true
+            feedRelatedVideosLoadingActivityIndicator.isHidden = false
+        case .error:
+            feedRelatedVideosLoadingLabel.text = "Try again"
+            feedRelatedVideosLoadingLabel.isHidden = false
+            feedRelatedVideosLoadingRetryButton.isHidden = false
+            feedRelatedVideosLoadingActivityIndicator.isHidden = true
+        case .success:
+            feedRelatedVideosLoadingLabel.isHidden = true
+            feedRelatedVideosLoadingRetryButton.isHidden = true
+            feedRelatedVideosLoadingActivityIndicator.isHidden = true
+        }
+    }
     
     func open(_ activityViewController: UIActivityViewController) {
         present(activityViewController, animated: true)
@@ -100,8 +193,43 @@ extension FeedDetailViewController: FeedDetailViewInterface {
             feedItemUrlButton.isHidden = true
         }
         
-        
     }
     
+}
+
+//MARK: - UICollectionViewDelegate -
+
+extension FeedDetailViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectItem(at: indexPath)
+    }
+
+}
+
+//MARK: - UICollectionViewDataSource -
+
+extension FeedDetailViewController: UICollectionViewDataSource {
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter.numberOfItems()
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as FeedRelatedVideoCollectionViewCell
+        cell.item = presenter.item(at: indexPath)
+        return cell
+    }
     
 }
+
+//MARK: - UICollectionViewDelegateFlowLayout -
+
+extension FeedDetailViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200, height: 110)
+    }
+    
+}
+

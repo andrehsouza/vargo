@@ -13,6 +13,12 @@
 		307F367D20F8162F0071DCB8 /* ThemeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F367C20F8162F0071DCB8 /* ThemeInitializer.swift */; };
 		307F368020F816710071DCB8 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F367F20F816710071DCB8 /* Initializable.swift */; };
 		307F368320F81A9D0071DCB8 /* Optima-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 307F368220F81A9D0071DCB8 /* Optima-Bold.ttf */; };
+		307F368520F9909A0071DCB8 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368420F9909A0071DCB8 /* ReusableViewProtocol.swift */; };
+		307F368720F991E30071DCB8 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368620F991E30071DCB8 /* UICollectionView+Extension.swift */; };
+		307F368920F9925D0071DCB8 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */; };
+		307F368D20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368B20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift */; };
+		307F368E20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307F368C20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib */; };
+		307F369020F9A5130071DCB8 /* RelatedVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368F20F9A5130071DCB8 /* RelatedVideoService.swift */; };
 		30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79220F4516200B9A3BB /* VNavigationController.swift */; };
 		30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */; };
 		7B5472F520F7811D00AB0278 /* FeedDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5472F420F7811D00AB0278 /* FeedDetail.storyboard */; };
@@ -91,6 +97,12 @@
 		307F367C20F8162F0071DCB8 /* ThemeInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeInitializer.swift; sourceTree = "<group>"; };
 		307F367F20F816710071DCB8 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		307F368220F81A9D0071DCB8 /* Optima-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Optima-Bold.ttf"; sourceTree = "<group>"; };
+		307F368420F9909A0071DCB8 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		307F368620F991E30071DCB8 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		307F368B20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRelatedVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		307F368C20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedRelatedVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		307F368F20F9A5130071DCB8 /* RelatedVideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoService.swift; sourceTree = "<group>"; };
 		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
 		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheVargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +240,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		307F368A20F9975A0071DCB8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				307F368B20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift */,
+				307F368C20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		30D2C79620F4519F00B9A3BB /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +274,7 @@
 			children = (
 				7B62BA3020F6A26C001E848B /* APIService.swift */,
 				7B62BA2C20F69E95001E848B /* FeedService.swift */,
+				307F368F20F9A5130071DCB8 /* RelatedVideoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -316,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				7B5472F420F7811D00AB0278 /* FeedDetail.storyboard */,
+				307F368A20F9975A0071DCB8 /* Cells */,
 				7B64586020F3AA580016557C /* FeedDetailInterfaces.swift */,
 				7B64586120F3AA580016557C /* FeedDetailPresenter.swift */,
 				7B64586220F3AA580016557C /* FeedDetailViewController.swift */,
@@ -432,6 +455,7 @@
 		7BD9102D20EFB9BE003E2DCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				307F368420F9909A0071DCB8 /* ReusableViewProtocol.swift */,
 				7B64583F20F394C10016557C /* UIColor+Extension.swift */,
 				7B64583E20F394C00016557C /* UIView+Extension.swift */,
 				7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */,
@@ -440,6 +464,8 @@
 				7B54730120F78FA200AB0278 /* UITableViewCell+Extension.swift */,
 				7B5472FF20F78F7200AB0278 /* UITableView+Extension.swift */,
 				7B7BC66B20F928C500957534 /* Date+Extensions.swift */,
+				307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */,
+				307F368620F991E30071DCB8 /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -569,6 +595,7 @@
 			files = (
 				7BD9102B20EFB6FA003E2DCE /* FeedList.storyboard in Resources */,
 				7BD90FEF20EFA633003E2DCE /* LaunchScreen.storyboard in Resources */,
+				307F368E20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib in Resources */,
 				7B5472FE20F7888800AB0278 /* FeedArticleTableViewCell.xib in Resources */,
 				7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */,
 				7B5472F520F7811D00AB0278 /* FeedDetail.storyboard in Resources */,
@@ -641,7 +668,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307F368720F991E30071DCB8 /* UICollectionView+Extension.swift in Sources */,
 				30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */,
+				307F368920F9925D0071DCB8 /* UICollectionViewCell+Extension.swift in Sources */,
 				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
 				7B54730020F78F7200AB0278 /* UITableView+Extension.swift in Sources */,
 				7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */,
@@ -671,13 +700,16 @@
 				7B64586720F3AA580016557C /* FeedDetailViewController.swift in Sources */,
 				7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */,
 				7B64584E20F396560016557C /* VButton.swift in Sources */,
+				307F368D20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift in Sources */,
 				7B64585C20F3AA1F0016557C /* FeedListPresenter.swift in Sources */,
 				7B62BA3320F6A93D001E848B /* ResponseType.swift in Sources */,
 				7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */,
 				7B7BC66C20F928C500957534 /* Date+Extensions.swift in Sources */,
 				7B54730620F7EF9700AB0278 /* VImageView.swift in Sources */,
 				7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */,
+				307F368520F9909A0071DCB8 /* ReusableViewProtocol.swift in Sources */,
 				7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */,
+				307F369020F9A5130071DCB8 /* RelatedVideoService.swift in Sources */,
 				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,
 				307F367D20F8162F0071DCB8 /* ThemeInitializer.swift in Sources */,
 				7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */,

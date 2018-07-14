@@ -18,9 +18,14 @@ protocol FeedDetailWireframeInterface: WireframeInterface {
 }
 
 protocol FeedDetailViewInterface: ViewInterface {
+    func reloadData()
     func open(_ activityViewController: UIActivityViewController)
     func setBookmarked()
     func showfeedContent(_ item: FeedItemDetailInterface)
+    func showWaitingView(with type: FeedDetailLoadingType)
+    func hideRelatedVideosContainer()
+    func showRelatedVideosContainerAnimating(_ animating: Bool)
+    func scrollCollectionToFirstItem()
 }
 
 protocol FeedDetailPresenterInterface: PresenterInterface {
@@ -28,10 +33,14 @@ protocol FeedDetailPresenterInterface: PresenterInterface {
     func didPressShare()
     func didPressBookmark()
     func didPressUrl()
+    func numberOfItems() -> Int
+    func item(at indexPath: IndexPath) -> FeedItemDetailInterface?
+    func didSelectItem(at indexPath: IndexPath)
+    func loadRelatedVideos()
 }
 
 protocol FeedDetailInteractorInterface: InteractorInterface {
-    
+    func getRelated(page: Int, completion: @escaping (RequestResultType<[FeedContent]>) -> Void)
 }
 
 protocol FeedItemDetailInterface: FeedListItemInterface {
@@ -42,4 +51,5 @@ protocol FeedItemDetailInterface: FeedListItemInterface {
     var urlDescription: String? { get }
     var url: String? { get }
     var date: String? { get }
+    var relatedVideos: Int? { get }
 }
