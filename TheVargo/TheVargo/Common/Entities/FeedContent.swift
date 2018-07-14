@@ -129,8 +129,8 @@ extension FeedContent: FeedItemDetailInterface {
         switch self {
         case .article(let article):
             return article.url
-        case .video(_):
-            return nil
+        case .video(let video):
+            return video.videoUrl
         }
     }
     

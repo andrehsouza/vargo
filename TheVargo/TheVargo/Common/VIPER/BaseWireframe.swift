@@ -12,13 +12,17 @@ import UIKit
 enum Transition {
     case root
     case push
-    case present(fromViewController: UIViewController)
+    case present(complation: (() -> Void)?)
 }
 
 protocol WireframeInterface: class {
     func popFromNavigationController(animated: Bool)
     func dismiss(animated: Bool)
     func show(_ wireframe: BaseWireframe, with transition: Transition, animated: Bool)
+    func show(_ viewController: UIViewController, with transition: Transition, animated: Bool)
+    func showErrorAlert(with message: String?)
+    func showAlert(with title: String?, message: String?)
+    func showAlert(with title: String?, message: String?, actions: [UIAlertAction])
 }
 
 class BaseWireframe {
@@ -57,13 +61,40 @@ extension BaseWireframe: WireframeInterface {
         switch transition {
         case .push:
             navigationController?.pushWireframe(wireframe, animated: animated)
-        case .present(let fromViewController):
+        case .present(let complation):
             let navigationController = VNavigationController()
             navigationController.setRootWireframe(wireframe)
-            fromViewController.present(navigationController, animated: animated, completion: nil)
+            _viewController.present(navigationController, animated: animated, completion: complation)
         case .root:
             navigationController?.setRootWireframe(wireframe, animated: animated)
         }
+    }
+    
+    func show(_ viewController: UIViewController, with transition: Transition, animated: Bool) {
+        switch transition {
+        case .push:
+            navigationController?.pushViewController(viewController, animated: animated)
+        case .present(let complation):
+            _viewController.present(viewController, animated: animated, completion: complation)
+        case .root:
+            navigationController?.setViewControllers([viewController], animated: animated)
+        }
+    }
+    
+    func showErrorAlert(with message: String?) {
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        showAlert(with: "Something went wrong", message: message, actions: [okAction])
+    }
+    
+    func showAlert(with title: String?, message: String?) {
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        showAlert(with: title, message: message, actions: [okAction])
+    }
+    
+    func showAlert(with title: String?, message: String?, actions: [UIAlertAction]) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        actions.forEach { alert.addAction($0) }
+        navigationController?.present(alert, animated: true, completion: nil)
     }
 
 }

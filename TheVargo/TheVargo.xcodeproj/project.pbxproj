@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3007C22D20FA339E0080C086 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3007C22C20FA339E0080C086 /* AVKit.framework */; };
 		304F553E20F5979900111E6D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553D20F5979900111E6D /* Video.swift */; };
 		304F554020F597E700111E6D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553F20F597E700111E6D /* Feed.swift */; };
 		307F367720F6E1280071DCB8 /* VUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F367620F6E1280071DCB8 /* VUrl.swift */; };
@@ -91,6 +92,8 @@
 /* Begin PBXFileReference section */
 		1D4E52A848D90BAA3F5C7E7C /* Pods-TheVargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVargo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo.release.xcconfig"; sourceTree = "<group>"; };
 		27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVargo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo.debug.xcconfig"; sourceTree = "<group>"; };
+		3007C22A20FA33050080C086 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3007C22C20FA339E0080C086 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		304F553D20F5979900111E6D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		304F553F20F597E700111E6D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		307F367620F6E1280071DCB8 /* VUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUrl.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3007C22D20FA339E0080C086 /* AVKit.framework in Frameworks */,
 				BB66A1C1709469079163ACAB /* Pods_TheVargo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +486,8 @@
 		D5FE0FAA92104EE3A58F5E33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3007C22C20FA339E0080C086 /* AVKit.framework */,
+				3007C22A20FA33050080C086 /* MediaPlayer.framework */,
 				5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */,
 			);
 			name = Frameworks;

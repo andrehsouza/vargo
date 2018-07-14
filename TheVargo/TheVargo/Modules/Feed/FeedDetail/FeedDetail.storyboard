@@ -207,7 +207,7 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xiy-45-oed" customClass="VCardView" customModule="TheVargo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="667" width="375" height="145"/>
+                                <rect key="frame" x="0.0" y="667" width="375" height="155"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvZ-Ca-XUp">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -217,7 +217,7 @@
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QDp-18-eXa">
-                                        <rect key="frame" x="10" y="35" width="355" height="110"/>
+                                        <rect key="frame" x="10" y="35" width="355" height="120"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XQa-3S-vMe">
                                             <size key="itemSize" width="200" height="110"/>
@@ -226,7 +226,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <stackView key="backgroundView" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" id="dfG-tI-3Fi">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="120"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Loading items..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPd-Ub-5lf">
@@ -252,7 +252,7 @@
                                         </stackView>
                                         <cells/>
                                     </collectionView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJd-NE-DiZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos you may like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJd-NE-DiZ">
                                         <rect key="frame" x="8" y="8" width="359" height="17"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -267,7 +267,7 @@
                                     <constraint firstItem="BJd-NE-DiZ" firstAttribute="leading" secondItem="Xiy-45-oed" secondAttribute="leading" constant="8" id="FMc-rG-396"/>
                                     <constraint firstAttribute="trailing" secondItem="DvZ-Ca-XUp" secondAttribute="trailing" id="GC5-Nq-EiH"/>
                                     <constraint firstAttribute="trailing" secondItem="QDp-18-eXa" secondAttribute="trailing" constant="10" id="Hpe-Rt-wxv"/>
-                                    <constraint firstAttribute="height" constant="145" id="Nam-O3-JaR"/>
+                                    <constraint firstAttribute="height" constant="155" id="Nam-O3-JaR"/>
                                     <constraint firstAttribute="trailing" secondItem="BJd-NE-DiZ" secondAttribute="trailing" constant="8" id="T17-9c-q9q"/>
                                     <constraint firstItem="QDp-18-eXa" firstAttribute="leading" secondItem="Xiy-45-oed" secondAttribute="leading" constant="10" id="WoN-Hb-fOo"/>
                                     <constraint firstItem="DvZ-Ca-XUp" firstAttribute="leading" secondItem="Xiy-45-oed" secondAttribute="leading" id="ZQJ-MB-Ra8"/>
@@ -295,11 +295,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xiy-45-oed" firstAttribute="leading" secondItem="ANH-Gv-WZa" secondAttribute="leading" id="7bx-ir-gPJ"/>
-                            <constraint firstItem="Xiy-45-oed" firstAttribute="bottom" secondItem="ANH-Gv-WZa" secondAttribute="bottom" constant="145" id="8fQ-rL-3kD"/>
+                            <constraint firstItem="Xiy-45-oed" firstAttribute="bottom" secondItem="ANH-Gv-WZa" secondAttribute="bottom" constant="155" id="8fQ-rL-3kD"/>
+                            <constraint firstItem="ANH-Gv-WZa" firstAttribute="bottom" secondItem="xTR-QC-REe" secondAttribute="bottom" id="ARD-vc-i10"/>
                             <constraint firstItem="ANH-Gv-WZa" firstAttribute="trailing" secondItem="Xiy-45-oed" secondAttribute="trailing" id="Bbc-FO-pem"/>
                             <constraint firstItem="ANH-Gv-WZa" firstAttribute="trailing" secondItem="xTR-QC-REe" secondAttribute="trailing" id="RRo-pq-yK4"/>
                             <constraint firstItem="pZN-rv-LIv" firstAttribute="width" secondItem="29e-9G-QuB" secondAttribute="width" id="fuD-1v-dh2"/>
-                            <constraint firstItem="Xiy-45-oed" firstAttribute="top" secondItem="xTR-QC-REe" secondAttribute="bottom" id="kw2-tp-TJP"/>
                             <constraint firstItem="xTR-QC-REe" firstAttribute="top" secondItem="ANH-Gv-WZa" secondAttribute="top" id="m0g-61-EbV"/>
                             <constraint firstItem="xTR-QC-REe" firstAttribute="leading" secondItem="ANH-Gv-WZa" secondAttribute="leading" id="u0C-fC-wHV"/>
                         </constraints>

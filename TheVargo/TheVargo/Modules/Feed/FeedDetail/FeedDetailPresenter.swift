@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import AVKit
 
 final class FeedDetailPresenter {
 
@@ -71,7 +72,16 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
     }
     
     func didPressPlay() {
-        //TODO play video
+        guard let urlString = _feedContent?.url, let urlToOpen = URL(string: urlString) else {
+            _wireframe.showErrorAlert(with: "Couldn't play the video.")
+            return
+        }
+        let player = AVPlayer(url: urlToOpen)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        _wireframe.show(playerViewController, with: .present(complation: {
+            playerViewController.player?.play()
+        }), animated: true)
     }
     
     func didPressShare() {
