@@ -1,4 +1,4 @@
-# The Vargo
+# Vargo - Videos & Articles
 
 A challenge that consists of build an app about articles and videos.
 
@@ -8,6 +8,15 @@ A challenge that consists of build an app about articles and videos.
 * Swift 4.1
 * CocoaPods
 * Viper
+* Alamofire
+* Rest API mock: Apiary
+
+## Screenshots
+
+![alt tag](https://image.ibb.co/jszJST/Captura_de_Tela_2018_07_14_a_s_16_02_53.png "Launch Screen")
+
+
+
 
 ## Authors
 
