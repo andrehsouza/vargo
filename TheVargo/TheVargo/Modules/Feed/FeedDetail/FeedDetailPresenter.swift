@@ -128,6 +128,7 @@ extension FeedDetailPresenter {
     private func displayFeedContent(_ feedContent: FeedContent) {
         _view.enableNavigationBarButtons(true)
         _view.showfeedContent(feedContent)
+        clearRelatedVideos()
         if feedContent.isVideo {
             _view.showWaitingView(with: .loading)
         } else {

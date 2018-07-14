@@ -48,7 +48,7 @@
                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layerBackgroundColor">
-                            <color key="value" red="0.91305857899999998" green="0.93324893710000001" blue="0.94568949940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="value" red="0.9137254901960784" green="0.93333333333333335" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>

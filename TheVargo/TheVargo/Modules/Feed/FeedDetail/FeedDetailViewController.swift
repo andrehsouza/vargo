@@ -122,13 +122,13 @@ extension FeedDetailViewController: FeedDetailViewInterface {
     }
     
     func showRelatedVideosContainerAnimating(_ animating: Bool) {
-        feedRelatedVideosContainer.isHidden = false
         if animating {
             UIView.animate(withDuration: 0.6,
                            delay: 0.0, usingSpringWithDamping: 1.0,
                            initialSpringVelocity: 1.0,
                            options: [.curveEaseInOut], animations: {
                             
+                self.feedRelatedVideosContainer.isHidden = false
                 self.feedRelatedVideosContainerBottom.constant = 0
                 self.view.layoutIfNeeded()
                             
