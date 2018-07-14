@@ -104,6 +104,10 @@ extension FeedDetailViewController {
 
 extension FeedDetailViewController: FeedDetailViewInterface {
     
+    func enableNavigationBarButtons(_ enable: Bool) {
+        navigationItem.rightBarButtonItems?.forEach() { $0.isEnabled = enable }
+    }
+    
     func scrollCollectionToFirstItem() {
         collectionView.contentOffset.x = 0
     }
@@ -153,10 +157,6 @@ extension FeedDetailViewController: FeedDetailViewInterface {
             feedRelatedVideosLoadingRetryButton.isHidden = true
             feedRelatedVideosLoadingActivityIndicator.isHidden = true
         }
-    }
-    
-    func open(_ activityViewController: UIActivityViewController) {
-        present(activityViewController, animated: true)
     }
     
     func setBookmarked() {

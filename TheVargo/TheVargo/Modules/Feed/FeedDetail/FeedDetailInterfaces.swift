@@ -19,16 +19,17 @@ protocol FeedDetailWireframeInterface: WireframeInterface {
 
 protocol FeedDetailViewInterface: ViewInterface {
     func reloadData()
-    func open(_ activityViewController: UIActivityViewController)
     func setBookmarked()
     func showfeedContent(_ item: FeedItemDetailInterface)
     func showWaitingView(with type: FeedDetailLoadingType)
     func hideRelatedVideosContainer()
     func showRelatedVideosContainerAnimating(_ animating: Bool)
     func scrollCollectionToFirstItem()
+    func enableNavigationBarButtons(_ enable: Bool)
 }
 
 protocol FeedDetailPresenterInterface: PresenterInterface {
+    func setFeedDetailFromSplitViewController(_ feedContent: FeedContent)
     func didPressPlay()
     func didPressShare()
     func didPressBookmark()

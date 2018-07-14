@@ -76,6 +76,12 @@ extension BaseWireframe: WireframeInterface {
             navigationController?.pushViewController(viewController, animated: animated)
         case .present(let complation):
             _viewController.present(viewController, animated: animated, completion: complation)
+            if let popOver = viewController.popoverPresentationController {
+                popOver.sourceView = _viewController.view
+                if let rightBarbuttons = _viewController.navigationItem.rightBarButtonItems {
+                    popOver.barButtonItem = rightBarbuttons[rightBarbuttons.count - 1]
+                }
+            }
         case .root:
             navigationController?.setViewControllers([viewController], animated: animated)
         }

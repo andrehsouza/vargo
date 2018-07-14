@@ -38,17 +38,6 @@
                                     <constraint firstAttribute="height" constant="90" id="ZNf-q0-HXr"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-B1-cpF">
-                                <rect key="frame" x="306" y="15" width="21" height="22"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="ic_book_mark">
-                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <state key="selected" image="ic_book_mark_selected"/>
-                                <connections>
-                                    <action selector="touchBookMark:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8VU-n0-Fr6"/>
-                                </connections>
-                            </button>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5o-5Z-ZrP" customClass="VCardView" customModule="TheVargo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="118.5" width="342" height="52.5"/>
                                 <subviews>
@@ -87,6 +76,40 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-fP-qWS" customClass="VCardView" customModule="TheVargo" customModuleProvider="target">
+                                <rect key="frame" x="306" y="15" width="21" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-B1-cpF">
+                                        <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic_book_mark">
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="ic_book_mark_selected"/>
+                                        <connections>
+                                            <action selector="touchBookMark:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8VU-n0-Fr6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kxy-B1-cpF" firstAttribute="top" secondItem="ZUY-fP-qWS" secondAttribute="top" id="9Uw-wm-kqU"/>
+                                    <constraint firstAttribute="bottom" secondItem="kxy-B1-cpF" secondAttribute="bottom" id="BOA-Mp-izG"/>
+                                    <constraint firstAttribute="trailing" secondItem="kxy-B1-cpF" secondAttribute="trailing" id="Cna-Tu-WB8"/>
+                                    <constraint firstItem="kxy-B1-cpF" firstAttribute="leading" secondItem="ZUY-fP-qWS" secondAttribute="leading" id="hwp-nq-lLk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -94,13 +117,13 @@
                             <constraint firstItem="5Ai-fb-iYL" firstAttribute="centerX" secondItem="hkO-TR-yBK" secondAttribute="centerX" id="HOZ-BP-i4C"/>
                             <constraint firstItem="d5o-5Z-ZrP" firstAttribute="leading" secondItem="hkO-TR-yBK" secondAttribute="leading" id="LG6-ic-SMu"/>
                             <constraint firstAttribute="trailing" secondItem="d5o-5Z-ZrP" secondAttribute="trailing" id="QfJ-UE-TQx"/>
-                            <constraint firstItem="kxy-B1-cpF" firstAttribute="top" secondItem="hkO-TR-yBK" secondAttribute="top" constant="15" id="XWl-wa-Hjn"/>
-                            <constraint firstAttribute="trailing" secondItem="kxy-B1-cpF" secondAttribute="trailing" constant="15" id="gyd-xA-tvi"/>
+                            <constraint firstAttribute="trailing" secondItem="ZUY-fP-qWS" secondAttribute="trailing" constant="15" id="bKE-x6-80v"/>
                             <constraint firstItem="Th6-7p-Dhh" firstAttribute="top" secondItem="hkO-TR-yBK" secondAttribute="top" id="h5o-9V-wkk"/>
                             <constraint firstAttribute="bottom" secondItem="d5o-5Z-ZrP" secondAttribute="bottom" id="sZv-3s-wN1"/>
                             <constraint firstItem="Th6-7p-Dhh" firstAttribute="leading" secondItem="hkO-TR-yBK" secondAttribute="leading" id="uUr-uq-UQW"/>
                             <constraint firstItem="5Ai-fb-iYL" firstAttribute="centerY" secondItem="hkO-TR-yBK" secondAttribute="centerY" constant="-25" id="wT3-2q-PmR"/>
                             <constraint firstAttribute="bottom" secondItem="Th6-7p-Dhh" secondAttribute="bottom" id="wvb-oP-EQm"/>
+                            <constraint firstItem="ZUY-fP-qWS" firstAttribute="top" secondItem="hkO-TR-yBK" secondAttribute="top" constant="15" id="yPh-D6-Y0I"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

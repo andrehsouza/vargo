@@ -12,6 +12,11 @@ class VSplitViewController: UISplitViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    private func configure() {
+        preferredDisplayMode = .allVisible
         delegate = self
     }
 

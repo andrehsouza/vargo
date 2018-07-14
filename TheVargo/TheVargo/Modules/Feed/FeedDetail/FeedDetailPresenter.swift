@@ -41,12 +41,17 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
     
     func viewDidLoad() {
         if let feedContent = _feedContent {
-            _view.showfeedContent(feedContent)
-            if feedContent.isVideo {
-                _view.showWaitingView(with: .loading)
-            } else {
-                _view.hideRelatedVideosContainer()
-            }
+            displayFeedContent(feedContent)
+        } else {
+            _view.enableNavigationBarButtons(false)
+        }
+    }
+    
+    func setFeedDetailFromSplitViewController(_ feedContent: FeedContent) {
+        _feedContent = feedContent
+        displayFeedContent(feedContent)
+        if feedContent.isVideo {
+            _view.showRelatedVideosContainerAnimating(true)
         }
     }
     
@@ -85,12 +90,13 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
     }
     
     func didPressShare() {
-        var shareItems: [Any] = [_feedContent?.title ?? ""]
-        if let urlString = _feedContent?.url, let urlToOpen = URL(string: urlString) {
+        guard let feedContent = _feedContent else { return }
+        var shareItems: [Any] = [feedContent.title ?? ""]
+        if let urlString = feedContent.url, let urlToOpen = URL(string: urlString) {
             shareItems.append(urlToOpen)
         }
         let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: [])
-        _view.open(activityViewController)
+        _wireframe.show(activityViewController, with: .present(complation: nil), animated: true)
     }
     
     func didPressBookmark() {
@@ -118,6 +124,16 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
 // MARK: - Extensions -
 
 extension FeedDetailPresenter {
+    
+    private func displayFeedContent(_ feedContent: FeedContent) {
+        _view.enableNavigationBarButtons(true)
+        _view.showfeedContent(feedContent)
+        if feedContent.isVideo {
+            _view.showWaitingView(with: .loading)
+        } else {
+            _view.hideRelatedVideosContainer()
+        }
+    }
     
     private func clearRelatedVideos() {
         _feedRelatedVideos = []
