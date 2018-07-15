@@ -187,6 +187,7 @@ extension FeedDetailViewController: FeedDetailViewInterface {
         feedItemFontTitleLabel.text = item.urlTitle
         
         if let urlDescription = item.urlDescription {
+            feedItemUrlButton.isHidden = false
             let attText = NSMutableAttributedString(string: urlDescription, attributes: [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
             feedItemUrlButton.setAttributedTitle(attText, for: .normal)
         } else {
