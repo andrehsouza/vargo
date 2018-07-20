@@ -1,6 +1,6 @@
 # Vargo - Videos & Articles
 
-A challenge that consists of build an app about articles and videos.
+A challenge has consisted of building an application to read articles and watch videos.
 
 ## Using
 

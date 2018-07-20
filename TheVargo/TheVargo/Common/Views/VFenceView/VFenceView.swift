@@ -32,9 +32,9 @@ extension VFenceView {
     }
     
     func showErrorView(error: ErrorInterface, target: Any, action:Selector) {
-        errorView.isHidden = error.hideButton
-        messageLbl.text = error.message
         loadingView.isHidden = true
+        errorView.isHidden = false
+        messageLbl.text = error.message
         btRetry.removeTarget(nil, action: nil, for: .allEvents)
         btRetry.addTarget(target, action: action, for: .touchUpInside)
         btRetry.setTitle(error.buttonText, for: .normal)
